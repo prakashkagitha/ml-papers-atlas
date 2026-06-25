@@ -1,0 +1,637 @@
+{
+  "OC2z7iSQKa": {
+    "rank": "1",
+    "title": "$\\tau^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+    "citation_count": "275",
+    "arxiv": "2506.07982",
+    "github_repo": "https://github.com/sierra-research/tau2-bench",
+    "hf_page": "https://huggingface.co/papers/2506.07982",
+    "candidate_post_urls": [
+      "https://x.com/SierraPlatform/status/1932464265207889974"
+    ],
+    "candidate_handles": [
+      "SierraPlatform"
+    ],
+    "author_post_url": "https://x.com/SierraPlatform/status/1932464265207889974",
+    "tag_handles": [
+      "SierraPlatform"
+    ]
+  },
+  "itonej9GIV": {
+    "rank": "2",
+    "title": "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
+    "citation_count": "270",
+    "arxiv": "2506.18088",
+    "github_repo": "https://github.com/RoboTwin-Platform/RoboTwin",
+    "hf_page": "https://huggingface.co/papers/2506.18088",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "tqTNOpkP5j": {
+    "rank": "3",
+    "title": "Spurious Rewards: Rethinking Training Signals in RLVR",
+    "citation_count": "184",
+    "arxiv": "2506.10947",
+    "github_repo": "https://github.com/ruixin31/Spurious_Rewards",
+    "hf_page": "https://huggingface.co/papers/2506.10947",
+    "candidate_post_urls": [
+      "https://x.com/StellaLisy/status/1927392717593526780"
+    ],
+    "candidate_handles": [
+      "StellaLisy"
+    ],
+    "author_post_url": "https://x.com/StellaLisy/status/1927392717593526780",
+    "tag_handles": [
+      "StellaLisy"
+    ]
+  },
+  "f1q8dFnxtY": {
+    "rank": "4",
+    "title": "WISE: World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation",
+    "citation_count": "173",
+    "arxiv": "2503.07265",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2503.07265",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "Jpxfof0EaS": {
+    "rank": "5",
+    "title": "Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models",
+    "citation_count": "151",
+    "arxiv": "2601.18734",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2601.18734",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "NUyt4uxzx0": {
+    "rank": "6",
+    "title": "Chain-of-Thought Reasoning In The Wild Is Not Always Faithful",
+    "citation_count": "143",
+    "arxiv": "2503.08679",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2503.08679",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "guLrgDb2jB": {
+    "rank": "7",
+    "title": "dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching",
+    "citation_count": "141",
+    "arxiv": "2506.06295",
+    "github_repo": "https://github.com/maomaocun/dLLM-cache",
+    "hf_page": "https://huggingface.co/papers/2506.06295",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "QkfkxyRizZ": {
+    "rank": "8",
+    "title": "Reinforcement Learning via Self-Distillation",
+    "citation_count": "140",
+    "arxiv": "2601.20802",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2601.20802",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "uEVTdoAbnK": {
+    "rank": "9",
+    "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+    "citation_count": "120",
+    "arxiv": "2509.16941",
+    "github_repo": "https://github.com/scaleapi/SWE-bench_Pro-os",
+    "hf_page": "https://huggingface.co/papers/2509.16941",
+    "candidate_post_urls": [],
+    "candidate_handles": [
+      "miguelrc",
+      "18vijayb"
+    ],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "qA6FgH0nnZ": {
+    "rank": "10",
+    "title": "Self-Distillation Enables Continual Learning",
+    "citation_count": "102",
+    "arxiv": "2601.19897",
+    "github_repo": "https://github.com/idanshen/Self-Distillation",
+    "hf_page": "https://huggingface.co/papers/2601.19897",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "z9Bo4eXSpW": {
+    "rank": "11",
+    "title": "Reinforcement Learning with Verifiable Rewards: GRPO's Loss, Dynamics, and Success Amplification",
+    "citation_count": "100",
+    "arxiv": "2503.06639",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2503.06639",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "GbOD25IA88": {
+    "rank": "12",
+    "title": "Does Math Reasoning Improve General LLM Capabilities? Understanding Transferability of LLM Reasoning",
+    "citation_count": "89",
+    "arxiv": "2507.00432",
+    "github_repo": "https://github.com/ReasoningTransfer/Transferability-of-LLM-Reasoning",
+    "hf_page": "https://huggingface.co/papers/2507.00432",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "Y1rHxA58If": {
+    "rank": "13",
+    "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
+    "citation_count": "89",
+    "arxiv": "2601.05242",
+    "github_repo": "https://github.com/NVlabs/GDPO",
+    "hf_page": "https://huggingface.co/papers/2601.05242",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "zloIrd77G5": {
+    "rank": "14",
+    "title": "Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity",
+    "citation_count": "78",
+    "arxiv": "2510.01171",
+    "github_repo": "https://github.com/CHATS-lab/verbalized-sampling",
+    "hf_page": "https://huggingface.co/papers/2510.01171",
+    "candidate_post_urls": [
+      "https://x.com/dch/status/1978471395173740900"
+    ],
+    "candidate_handles": [
+      "dch"
+    ],
+    "author_post_url": "https://x.com/dch/status/1978471395173740900",
+    "tag_handles": [
+      "dch"
+    ]
+  },
+  "BamDfCP5R3": {
+    "rank": "15",
+    "title": "From Interactions to Principles: Experience-Driven Self-Distillation for Evolving LLM Agents",
+    "citation_count": "77",
+    "arxiv": "2510.16079",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2510.16079",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "lNRgWoGfYg": {
+    "rank": "16",
+    "title": "Scaling Long-Horizon Agent via Context Folding",
+    "citation_count": "77",
+    "arxiv": "2510.11967",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2510.11967",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "d2TFven78P": {
+    "rank": "17",
+    "title": "Vision-Language-Action Pretraining from Large-Scale Human Videos",
+    "citation_count": "76",
+    "arxiv": "2507.15597",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2507.15597",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "oBgLvd5YC6": {
+    "rank": "18",
+    "title": "SimpleMem: Efficient Lifelong Memory for LLM Agents",
+    "citation_count": "74",
+    "arxiv": "2601.02553",
+    "github_repo": "https://github.com/aiming-lab/SimpleMem",
+    "hf_page": "https://huggingface.co/papers/2601.02553",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "GfSwkDSr8J": {
+    "rank": "19",
+    "title": "WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling",
+    "citation_count": "74",
+    "arxiv": "2512.14614",
+    "github_repo": "https://github.com/Tencent-Hunyuan/HY-WorldPlay",
+    "hf_page": "https://huggingface.co/papers/2512.14614",
+    "candidate_post_urls": [],
+    "candidate_handles": [
+      "TencentHunyuan"
+    ],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "gz7hVnrRWq": {
+    "rank": "20",
+    "title": "Advancing LLM Reasoning with Natural Language and Numerical Feedback",
+    "citation_count": "71",
+    "arxiv": "2506.03106",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2506.03106",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "c3BVcHcSiR": {
+    "rank": "21",
+    "title": "Discrete Diffusion VLA: Bringing Discrete Diffusion to Action Decoding in Vision-Language-Action Policies",
+    "citation_count": "67",
+    "arxiv": "2508.20072",
+    "github_repo": "https://github.com/JiuTian-VL/Large-VLM-based-VLA-for-Robotic-Manipulation",
+    "hf_page": "https://huggingface.co/papers/2508.20072",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "97NEP1pyS3": {
+    "rank": "22",
+    "title": "Reinforcement Learning with Evolving Rubrics for Deep Research",
+    "citation_count": "61",
+    "arxiv": "2511.19399",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2511.19399",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "BYInOck3gr": {
+    "rank": "23",
+    "title": "Causal Forcing: Autoregressive Diffusion Distillation Done Right for High-Quality Real-Time Video Generation",
+    "citation_count": "59",
+    "arxiv": "2602.02214",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2602.02214",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "96zNuQrH9Y": {
+    "rank": "24",
+    "title": "Learning to Discover at Test Time",
+    "citation_count": "56",
+    "arxiv": "2601.16175",
+    "github_repo": "https://github.com/test-time-training/discover",
+    "hf_page": "https://huggingface.co/papers/2601.16175",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "FuvU7PTyED": {
+    "rank": "25",
+    "title": "DreamDojo: A Real-Time Robot World Model from Large-Scale Human Videos",
+    "citation_count": "55",
+    "arxiv": "2602.06949",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2602.06949",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "mDhyxu8WRb": {
+    "rank": "26",
+    "title": "mHC: Manifold-Constrained Hyper-Connections",
+    "citation_count": "55",
+    "arxiv": "2512.24880",
+    "github_repo": "https://github.com/tokenbender/mHC-manifold-constrained-hyper-connections",
+    "hf_page": "https://huggingface.co/papers/2512.24880",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "ODTM64azGa": {
+    "rank": "27",
+    "title": "Retaining by Doing: The Role of On-Policy Data in Mitigating Forgetting",
+    "citation_count": "54",
+    "arxiv": "2510.18874",
+    "github_repo": "https://github.com/princeton-pli/retaining-by-doing",
+    "hf_page": "https://huggingface.co/papers/2510.18874",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "qpkG0eKx4v": {
+    "rank": "28",
+    "title": "MemEvolve: Meta-Evolution of Agent Memory Systems",
+    "citation_count": "52",
+    "arxiv": "2512.18746",
+    "github_repo": "https://github.com/bingreeky/MemEvolve",
+    "hf_page": "https://huggingface.co/papers/2512.18746",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "5EmOOLtH5P": {
+    "rank": "29",
+    "title": "ACON: Optimizing Context Compression for Long-horizon LLM Agents",
+    "citation_count": "51",
+    "arxiv": "2510.00615",
+    "github_repo": "https://github.com/microsoft/acon",
+    "hf_page": "https://huggingface.co/papers/2510.00615",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "TBaUfO9znF": {
+    "rank": "30",
+    "title": "On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models",
+    "citation_count": "50",
+    "arxiv": "2512.07783",
+    "github_repo": "https://github.com/Interplay-LM-Reasoning/Interplay-LM-Reasoning",
+    "hf_page": "https://huggingface.co/papers/2512.07783",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "npsWK8rgYO": {
+    "rank": "31",
+    "title": "TreePO: Enhancing Policy Efficacy and Inference Efficiency with Tree Modeling",
+    "citation_count": "50",
+    "arxiv": "2508.17445",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2508.17445",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "Hn81xuLaXY": {
+    "rank": "32",
+    "title": "Efficient Reasoning with Hidden Thinking",
+    "citation_count": "49",
+    "arxiv": "2501.19201",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2501.19201",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "HV1R5bMSpa": {
+    "rank": "33",
+    "title": "ATLAS: Learning to Optimally Memorize the Context at Test Time",
+    "citation_count": "48",
+    "arxiv": "2505.23735",
+    "github_repo": "https://github.com/danielquintas8/atlas-torch",
+    "hf_page": "https://huggingface.co/papers/2505.23735",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "PnTXyTR2VG": {
+    "rank": "34",
+    "title": "Multimodal Latent Language Modeling with Next-Token Diffusion",
+    "citation_count": "45",
+    "arxiv": "2412.08635",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2412.08635",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "AvBgmOGsdQ": {
+    "rank": "35",
+    "title": "SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience",
+    "citation_count": "45",
+    "arxiv": "2508.04700",
+    "github_repo": "https://github.com/SunzeY/SEAgent",
+    "hf_page": "https://huggingface.co/papers/2508.04700",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "N3dXUHY5dD": {
+    "rank": "36",
+    "title": "Agent Learning via Early Experience",
+    "citation_count": "44",
+    "arxiv": "2510.08558",
+    "github_repo": "https://github.com/langfengQ/verl-agent",
+    "hf_page": "https://huggingface.co/papers/2510.08558",
+    "candidate_post_urls": [
+      "https://x.com/langfengq/status/1930848580505620677"
+    ],
+    "candidate_handles": [
+      "langfengq",
+      "YSLIU627",
+      "MakeKJ",
+      "FabianSchuetze"
+    ],
+    "author_post_url": "https://x.com/langfengq/status/1930848580505620677",
+    "tag_handles": [
+      "langfengq",
+      "YSLIU627",
+      "MakeKJ",
+      "FabianSchuetze"
+    ]
+  },
+  "EvmCeoiKYI": {
+    "rank": "37",
+    "title": "ZeroBench: An Impossible Visual Benchmark for Contemporary Large Multimodal Models",
+    "citation_count": "44",
+    "arxiv": "2502.09696",
+    "github_repo": "https://github.com/Yangyi-Chen/Multimodal-AND-Large-Language-Models",
+    "hf_page": "https://huggingface.co/papers/2502.09696",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "MgtyPYrC4h": {
+    "rank": "38",
+    "title": "Blending Supervised and Reinforcement Fine-Tuning with Prefix Sampling",
+    "citation_count": "41",
+    "arxiv": "2507.01679",
+    "github_repo": "https://github.com/ZeroYuHuang/prefix_rft",
+    "hf_page": "https://huggingface.co/papers/2507.01679",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "YXnFGsSkCC": {
+    "rank": "39",
+    "title": "Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning",
+    "citation_count": "41",
+    "arxiv": "2507.21892",
+    "github_repo": "https://github.com/LHRLAB/Graph-R1",
+    "hf_page": "https://huggingface.co/papers/2507.21892",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "m1IRWFAMsa": {
+    "rank": "40",
+    "title": "NorMuon: Making Muon more efficient and scalable",
+    "citation_count": "41",
+    "arxiv": "2510.05491",
+    "github_repo": "https://github.com/zichongli5/NorMuon",
+    "hf_page": "https://huggingface.co/papers/2510.05491",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "U1yt3NN0mC": {
+    "rank": "41",
+    "title": "Data Augmentation of Contrastive Learning is Estimating Positive-incentive Noise",
+    "citation_count": "40",
+    "arxiv": "2408.09929",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2408.09929",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "YScdQhxHgS": {
+    "rank": "42",
+    "title": "DexMachina: Functional Retargeting for Bimanual Dexterous Manipulation",
+    "citation_count": "40",
+    "arxiv": "2505.24853",
+    "github_repo": "https://github.com/MandiZhao/dexmachina",
+    "hf_page": "https://huggingface.co/papers/2505.24853",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "G5x5eEZ8yY": {
+    "rank": "43",
+    "title": "GTPO and GRPO-S: Token and Sequence-Level Reward Shaping with Policy Entropy",
+    "citation_count": "40",
+    "arxiv": "",
+    "github_repo": "",
+    "hf_page": "",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "ebZcMQImhG": {
+    "rank": "44",
+    "title": "Privileged Information Distillation for Language Models",
+    "citation_count": "40",
+    "arxiv": "2602.04942",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2602.04942",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "SxsyLjIfWB": {
+    "rank": "45",
+    "title": "TabICooL: A better, faster, scalable, and open tabular foundation model",
+    "citation_count": "40",
+    "arxiv": "2602.11139",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2602.11139",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "q17jVxMtwS": {
+    "rank": "46",
+    "title": "The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models",
+    "citation_count": "39",
+    "arxiv": "2601.10387",
+    "github_repo": "https://github.com/safety-research/assistant-axis",
+    "hf_page": "https://huggingface.co/papers/2601.10387",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "HFNJOpXHfm": {
+    "rank": "47",
+    "title": "WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting",
+    "citation_count": "39",
+    "arxiv": "2510.10726",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2510.10726",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "ZMkfGplf4b": {
+    "rank": "48",
+    "title": "Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers",
+    "citation_count": "38",
+    "arxiv": "2510.11370",
+    "github_repo": "https://github.com/korziner/nano-zaya340M-cca-markov-moe",
+    "hf_page": "https://huggingface.co/papers/2510.11370",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "1uU7X9zzJB": {
+    "rank": "49",
+    "title": "ACTIVE-o3 : Empowering MLLMs with Active Perception via Pure Reinforcement Learning",
+    "citation_count": "37",
+    "arxiv": "2505.21457",
+    "github_repo": "https://github.com/aim-uofa/Active-o3",
+    "hf_page": "https://huggingface.co/papers/2505.21457",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  },
+  "gtmyFnvXAW": {
+    "rank": "50",
+    "title": "Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression",
+    "citation_count": "37",
+    "arxiv": "2512.05081",
+    "github_repo": "",
+    "hf_page": "https://huggingface.co/papers/2512.05081",
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": []
+  }
+}
