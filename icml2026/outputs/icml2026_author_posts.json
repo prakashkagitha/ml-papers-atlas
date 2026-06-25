@@ -25,7 +25,9 @@
     "github_repo": "https://github.com/RoboTwin-Platform/RoboTwin",
     "hf_page": "https://huggingface.co/papers/2506.18088",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "MarioChan2002"
+    ],
     "author_post_url": "",
     "tag_handles": []
   },
@@ -84,8 +86,13 @@
     "candidate_handles": [
       "NeelNanda5"
     ],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/ArthurConmy/status/1874920611354718438",
+    "tag_handles": [
+      "IvanArcus",
+      "ArthurConmy",
+      "NeelNanda5"
+    ],
+    "post_note": "coauthor (A. Conmy) thread about the work; first author @IvanArcus"
   },
   "guLrgDb2jB": {
     "rank": "7",
@@ -107,7 +114,9 @@
     "github_repo": "",
     "hf_page": "https://huggingface.co/papers/2601.20802",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "jonashuebotter"
+    ],
     "author_post_url": "",
     "tag_handles": []
   },
@@ -123,7 +132,7 @@
       "miguelrc",
       "18vijayb"
     ],
-    "author_post_url": "https://x.com/scale_AI/status/1969883270277153234",
+    "author_post_url": "https://x.com/vbingliu/status/1969460781495566611",
     "tag_handles": [
       "vbingliu",
       "scale_AI"

@@ -24,6 +24,7 @@ Simulation-based data synthesis has emerged as a powerful paradigm for enhancing
 [arXiv](https://arxiv.org/abs/2506.18088) · [code](https://github.com/RoboTwin-Platform/RoboTwin) · [ICML](https://icml.cc/virtual/2026/poster/62192) · [OpenReview](https://openreview.net/forum?id=itonej9GIV)
 
 **Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @MarioChan2002
 
 ---
 
@@ -69,8 +70,8 @@ Recent studies indicate that when faced with explicit biases in prompts, models 
 
 [arXiv](https://arxiv.org/abs/2503.08679) · [ICML](https://icml.cc/virtual/2026/poster/64450) · [OpenReview](https://openreview.net/forum?id=NUyt4uxzx0)
 
-**Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @NeelNanda5
+**Author X post:** https://x.com/ArthurConmy/status/1874920611354718438
+**Tag:** IvanArcus ArthurConmy NeelNanda5
 
 ---
 
@@ -93,6 +94,7 @@ Large language models are increasingly post-trained with reinforcement learning 
 [arXiv](https://arxiv.org/abs/2601.20802) · [ICML](https://icml.cc/virtual/2026/poster/64121) · [OpenReview](https://openreview.net/forum?id=QkfkxyRizZ)
 
 **Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @jonashuebotter
 
 ---
 
@@ -103,7 +105,7 @@ We present SWE-Bench Pro, a comprehensive benchmark designed to evaluate softwar
 
 [arXiv](https://arxiv.org/abs/2509.16941) · [code](https://github.com/scaleapi/SWE-bench_Pro-os) · [ICML](https://icml.cc/virtual/2026/poster/61047) · [OpenReview](https://openreview.net/forum?id=uEVTdoAbnK)
 
-**Author X post:** https://x.com/scale_AI/status/1969883270277153234
+**Author X post:** https://x.com/vbingliu/status/1969460781495566611
 **Tag:** vbingliu scale_AI
 
 ---
