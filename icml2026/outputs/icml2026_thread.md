@@ -37,6 +37,7 @@ Simulation-based data synthesis has emerged as a powerful paradigm for enhancing
 
 **Author X post:** _TODO: verify author thread_
 **Author handle(s):** [@MarioChan2002](https://x.com/MarioChan2002)
+_Note: Corresponding authors Yao Mu & Ping Luo; first author Tianxing Chen. @MarioChan2002 plausible but unverified._
 
 ---
 
@@ -108,6 +109,7 @@ Recent studies indicate that when faced with explicit biases in prompts, models 
 
 **Author X post:** https://x.com/ArthurConmy/status/1874920611354718438
 **Tag:** [@IvanArcus](https://x.com/IvanArcus) [@ArthurConmy](https://x.com/ArthurConmy) [@NeelNanda5](https://x.com/NeelNanda5)
+_Note: coauthor (A. Conmy) thread about the work; first author @IvanArcus_
 
 ---
 
@@ -131,6 +133,7 @@ Large language models are increasingly post-trained with reinforcement learning 
 
 **Author X post:** _TODO: verify author thread_
 **Author handle(s):** [@jonashuebotter](https://x.com/jonashuebotter)
+_Note: Jonas Hübotter, lab lasgroup (ETH Zurich); @jonashuebotter is the right person to check._
 
 ---
 
@@ -395,6 +398,8 @@ Transformers have been established as the most popular backbones in sequence mod
 [arXiv](https://arxiv.org/abs/2505.23735) · [code](https://github.com/danielquintas8/atlas-torch) · [ICML](https://icml.cc/virtual/2026/poster/65037) · [OpenReview](https://openreview.net/forum?id=HV1R5bMSpa)
 
 **Author X post:** _TODO: verify author thread_
+**Author handle(s):** [@behrouz_ali](https://x.com/behrouz_ali)
+_Note: Look for Ali Behrouz's ATLAS-specific thread (~late May 2025) — not the Titans one._
 
 ---
 
@@ -527,6 +532,8 @@ Large language models can represent a variety of personas but typically default 
 [arXiv](https://arxiv.org/abs/2601.10387) · [code](https://github.com/safety-research/assistant-axis) · [ICML](https://icml.cc/virtual/2026/poster/61446) · [OpenReview](https://openreview.net/forum?id=q17jVxMtwS)
 
 **Author X post:** _TODO: verify author thread_
+**Author handle(s):** [@AnthropicAI](https://x.com/AnthropicAI)
+_Note: Authors Christina Lu & Jack Lindsey (Anthropic); likely via Lindsey's account or @AnthropicAI._
 
 ---
 

@@ -57,6 +57,23 @@ def one_line_blurb(abstract: str, min_sentences: int = 2, max_sentences: int = 3
     return " ".join(out).strip()
 
 
+_GREEK = {"alpha": "α", "beta": "β", "gamma": "γ", "delta": "δ", "epsilon": "ε",
+          "theta": "θ", "lambda": "λ", "mu": "μ", "pi": "π", "rho": "ρ",
+          "sigma": "σ", "tau": "τ", "phi": "φ", "psi": "ψ", "omega": "ω"}
+_SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
+_SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+
+
+def clean_latex(t: str) -> str:
+    t = t or ""
+    for name, ch in _GREEK.items():
+        t = re.sub(rf"\\{name}\b", ch, t)
+    t = re.sub(r"\^\{?(\d+)\}?", lambda m: m.group(1).translate(_SUP), t)
+    t = re.sub(r"_\{?(\d+)\}?", lambda m: m.group(1).translate(_SUB), t)
+    t = t.replace("$", "").replace("\\", "").replace("{", "").replace("}", "")
+    return re.sub(r"\s+", " ", t).strip()
+
+
 def select_papers(rows: List[Dict[str, str]], base: int, extend_to: int, threshold: int) -> List[Dict[str, str]]:
     rows = sorted(rows, key=lambda r: to_int(r.get("citation_count")), reverse=True)
     selected = rows[:base]
@@ -144,6 +161,7 @@ def main() -> int:
     ap.add_argument("--stars", default="outputs/icml2026_top_papers_by_github_stars.csv")
     ap.add_argument("--posts", default="outputs/icml2026_author_posts.json")
     ap.add_argument("--out-md", default="outputs/icml2026_thread.md")
+    ap.add_argument("--out-txt", default="outputs/icml2026_thread_plaintext.txt")
     ap.add_argument("--out-csv", default="outputs/icml2026_thread_papers.csv")
     ap.add_argument("--base", type=int, default=30)
     ap.add_argument("--extend-to", type=int, default=50)
@@ -261,13 +279,56 @@ def main() -> int:
                 lines.append(f"**Author handle(s):** {handle_links(cand_handles[:5])}")
             if cand_urls:
                 lines.append(f"  - candidate post(s): {', '.join(cand_urls[:3])}")
+        note = prow.get("note") or prow.get("post_note")
+        if note:
+            lines.append(f"_Note: {note}_")
         lines.append("")
         lines.append("---")
         lines.append("")
 
     Path(args.out_md).write_text("\n".join(lines), encoding="utf-8")
+
+    # ---- plain-text version (copy-paste straight into X) ----
+    tx: List[str] = []
+    for r in selected:
+        oid = r.get("openreview_id", "")
+        srow = stars.get(oid, {})
+        prow = posts.get(oid, {})
+        cc = r.get("citation_count", "")
+        stars_s = (str(prow["github_stars"]) if prow.get("github_stars") is not None
+                   else srow.get("github_stars", ""))
+        meta = f"{r.get('first_author','')} et al. — {cc} citations"
+        if stars_s:
+            meta += f" · {stars_s}★ GitHub"
+        if r.get("is_oral") == "true":
+            meta += " · Oral"
+        elif r.get("is_spotlight") == "true":
+            meta += " · Spotlight"
+        handles = prow.get("tag_handles") or prow.get("candidate_handles") or []
+        repo = prow.get("github_repo") or srow.get("github_repo") or ""
+        post = prow.get("author_post_url", "")
+
+        tx.append(clean_latex(r.get("title", "")))
+        tx.append("")
+        tx.append(meta)
+        if handles:
+            tx.append(" ".join("@" + h for h in handles[:4]))
+        tx.append("")
+        tx.append(one_line_blurb(r.get("abstract", "")).replace("*", ""))
+        tx.append("")
+        if r.get("arxiv_abs_url"):
+            tx.append(f"arXiv: {r['arxiv_abs_url']}")
+        if repo:
+            tx.append(f"Code: {repo}")
+        tx.append("")
+        tx.append(post if post else "[X post link]")
+        tx.append("")
+        tx.append("----")
+        tx.append("")
+    Path(args.out_txt).write_text("\n".join(tx), encoding="utf-8")
+
     print(f"Selected {n} papers (base {args.base}, extend-to {args.extend_to}, >{args.threshold} cites).")
-    print(f"Wrote {args.out_md} and {args.out_csv}.")
+    print(f"Wrote {args.out_md}, {args.out_txt} and {args.out_csv}.")
     cutoff = to_int(selected[-1].get("citation_count")) if selected else 0
     print(f"Citation range: #{1}={to_int(selected[0].get('citation_count'))} .. #{n}={cutoff}")
     return 0

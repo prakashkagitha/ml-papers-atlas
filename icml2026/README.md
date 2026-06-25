@@ -15,6 +15,7 @@ X/Twitter thread.
 | `icml2026_top_papers_by_github_stars.csv` | adoption cross-check: 101 papers ranked by their code repo's GitHub stars |
 | `icml2026_author_posts.json` | best-effort author/lab X post per top-50 paper (own-repo README scrape) |
 | `icml2026_thread.md` | thread-ready markdown: top-30 (extended to 50 while > 25 citations), one block per paper, each with citations, GitHub stars, links, and the author X post |
+| `icml2026_thread_plaintext.txt` | plain-text version of the thread, formatted to copy-paste straight into X posts |
 | `icml2026_thread_papers.csv` | the selected thread papers as a flat CSV |
 | `icml2026_top20_by_citations.png` | table image: top 20 by citations, with GitHub stars |
 | `icml2026_top20_by_stars.png` | table image: top 20 by GitHub stars, with citations |

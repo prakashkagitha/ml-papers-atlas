@@ -31,7 +31,8 @@
     ],
     "author_post_url": "",
     "tag_handles": [],
-    "github_stars": 2489
+    "github_stars": 2489,
+    "note": "Corresponding authors Yao Mu & Ping Luo; first author Tianxing Chen. @MarioChan2002 plausible but unverified."
   },
   "tqTNOpkP5j": {
     "rank": "3",
@@ -123,7 +124,8 @@
       "jonashuebotter"
     ],
     "author_post_url": "",
-    "tag_handles": []
+    "tag_handles": [],
+    "note": "Jonas Hübotter, lab lasgroup (ETH Zurich); @jonashuebotter is the right person to check."
   },
   "uEVTdoAbnK": {
     "rank": "9",
@@ -481,10 +483,13 @@
     "github_repo": "https://github.com/danielquintas8/atlas-torch",
     "hf_page": "https://huggingface.co/papers/2505.23735",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "behrouz_ali"
+    ],
     "author_post_url": "",
     "tag_handles": [],
-    "github_stars": 2
+    "github_stars": 2,
+    "note": "Look for Ali Behrouz's ATLAS-specific thread (~late May 2025) — not the Titans one."
   },
   "PnTXyTR2VG": {
     "rank": "34",
@@ -655,10 +660,13 @@
     "github_repo": "https://github.com/safety-research/assistant-axis",
     "hf_page": "https://huggingface.co/papers/2601.10387",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "AnthropicAI"
+    ],
     "author_post_url": "",
     "tag_handles": [],
-    "github_stars": 149
+    "github_stars": 149,
+    "note": "Authors Christina Lu & Jack Lindsey (Anthropic); likely via Lindsey's account or @AnthropicAI."
   },
   "HFNJOpXHfm": {
     "rank": "47",
