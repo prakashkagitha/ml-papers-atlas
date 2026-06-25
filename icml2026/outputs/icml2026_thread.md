@@ -44,7 +44,7 @@ We show that reinforcement learning with verifiable rewards (RLVR) can elicit st
 
 Text-to-Image (T2I) models are capable of generating high-quality artistic creations and visual content.
 
-[arXiv](https://arxiv.org/abs/2503.07265) · [ICML](https://icml.cc/virtual/2026/poster/62614) · [OpenReview](https://openreview.net/forum?id=f1q8dFnxtY)
+[arXiv](https://arxiv.org/abs/2503.07265) · [code](https://github.com/PKU-YuanGroup/WISE) · [ICML](https://icml.cc/virtual/2026/poster/62614) · [OpenReview](https://openreview.net/forum?id=f1q8dFnxtY)
 
 **Author X post:** _TODO: verify author thread_
 
@@ -57,7 +57,8 @@ Knowledge distillation improves large language model (LLM) reasoning by compress
 
 [arXiv](https://arxiv.org/abs/2601.18734) · [ICML](https://icml.cc/virtual/2026/poster/64784) · [OpenReview](https://openreview.net/forum?id=Jpxfof0EaS)
 
-**Author X post:** _TODO: verify author thread_
+**Author X post:** https://x.com/siyan_zhao/status/2014372747862999382
+**Tag:** siyan_zhao
 
 ---
 
@@ -69,6 +70,7 @@ Recent studies indicate that when faced with explicit biases in prompts, models 
 [arXiv](https://arxiv.org/abs/2503.08679) · [ICML](https://icml.cc/virtual/2026/poster/64450) · [OpenReview](https://openreview.net/forum?id=NUyt4uxzx0)
 
 **Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @NeelNanda5
 
 ---
 
@@ -101,8 +103,8 @@ We present SWE-Bench Pro, a comprehensive benchmark designed to evaluate softwar
 
 [arXiv](https://arxiv.org/abs/2509.16941) · [code](https://github.com/scaleapi/SWE-bench_Pro-os) · [ICML](https://icml.cc/virtual/2026/poster/61047) · [OpenReview](https://openreview.net/forum?id=uEVTdoAbnK)
 
-**Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @miguelrc, @18vijayb
+**Author X post:** https://x.com/scale_AI/status/1969883270277153234
+**Tag:** vbingliu scale_AI
 
 ---
 
@@ -113,7 +115,8 @@ Continual learning, enabling models to acquire new skills and knowledge without 
 
 [arXiv](https://arxiv.org/abs/2601.19897) · [code](https://github.com/idanshen/Self-Distillation) · [ICML](https://icml.cc/virtual/2026/poster/61434) · [OpenReview](https://openreview.net/forum?id=qA6FgH0nnZ)
 
-**Author X post:** _TODO: verify author thread_
+**Author X post:** https://x.com/IdanShenfeld/status/2016818116441850172
+**Tag:** IdanShenfeld
 
 ---
 
@@ -135,7 +138,8 @@ Math reasoning has become the poster child of progress in large language models 
 
 [arXiv](https://arxiv.org/abs/2507.00432) · [code](https://github.com/ReasoningTransfer/Transferability-of-LLM-Reasoning) · [ICML](https://icml.cc/virtual/2026/poster/65125) · [OpenReview](https://openreview.net/forum?id=GbOD25IA88)
 
-**Author X post:** _TODO: verify author thread_
+**Author X post:** https://x.com/xiangyue96/status/1940494376133869947
+**Tag:** xiangyue96
 
 ---
 
@@ -157,8 +161,8 @@ Post-training alignment often reduces LLM diversity, leading to a phenomenon kno
 
 [arXiv](https://arxiv.org/abs/2510.01171) · [code](https://github.com/CHATS-lab/verbalized-sampling) · [ICML](https://icml.cc/virtual/2026/poster/60489) · [OpenReview](https://openreview.net/forum?id=zloIrd77G5)
 
-**Author X post:** https://x.com/dch/status/1978471395173740900
-**Tag:** dch
+**Author X post:** https://x.com/shi_weiyan/status/1978453323167490245
+**Tag:** shi_weiyan JiayiZhang0427 chrmanning
 
 ---
 
@@ -202,7 +206,8 @@ To support long-term interaction in complex environments, LLM agents require mem
 
 [arXiv](https://arxiv.org/abs/2601.02553) · [code](https://github.com/aiming-lab/SimpleMem) · [ICML](https://icml.cc/virtual/2026/poster/61640) · [OpenReview](https://openreview.net/forum?id=oBgLvd5YC6)
 
-**Author X post:** _TODO: verify author thread_
+**Author X post:** https://x.com/HuaxiuYaoML/status/2039923459841523807
+**Tag:** HuaxiuYaoML
 
 ---
 
@@ -213,8 +218,8 @@ This paper presents WorldPlay, a streaming video diffusion model that enables re
 
 [arXiv](https://arxiv.org/abs/2512.14614) · [code](https://github.com/Tencent-Hunyuan/HY-WorldPlay) · [ICML](https://icml.cc/virtual/2026/poster/65111) · [OpenReview](https://openreview.net/forum?id=GfSwkDSr8J)
 
-**Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @TencentHunyuan
+**Author X post:** https://x.com/DylanTFWang/status/2001146210779115550
+**Tag:** DylanTFWang TencentHunyuan
 
 ---
 
@@ -223,7 +228,7 @@ This paper presents WorldPlay, a streaming video diffusion model that enables re
 
 Recent advances in reinforcement learning (RL) using numerical rewards have significantly enhanced the complex reasoning capabilities of large language models (LLMs).
 
-[arXiv](https://arxiv.org/abs/2506.03106) · [ICML](https://icml.cc/virtual/2026/poster/62398) · [OpenReview](https://openreview.net/forum?id=gz7hVnrRWq)
+[arXiv](https://arxiv.org/abs/2506.03106) · [code](https://github.com/zhangxy-2019/critique-GRPO) · [ICML](https://icml.cc/virtual/2026/poster/62398) · [OpenReview](https://openreview.net/forum?id=gz7hVnrRWq)
 
 **Author X post:** _TODO: verify author thread_
 
@@ -247,7 +252,8 @@ Deep research agents perform multi-step research to produce long-form, well-attr
 
 [arXiv](https://arxiv.org/abs/2511.19399) · [ICML](https://icml.cc/virtual/2026/poster/65886) · [OpenReview](https://openreview.net/forum?id=97NEP1pyS3)
 
-**Author X post:** _TODO: verify author thread_
+**Author X post:** https://x.com/faeze_brh/status/1990839185117491266
+**Tag:** faeze_brh allen_ai HannaHajishirzi
 
 ---
 
@@ -270,6 +276,7 @@ How can we use AI to discover a new state of the art for a scientific problem?
 [arXiv](https://arxiv.org/abs/2601.16175) · [code](https://github.com/test-time-training/discover) · [ICML](https://icml.cc/virtual/2026/poster/65888) · [OpenReview](https://openreview.net/forum?id=96zNuQrH9Y)
 
 **Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @mertyuksekgonul
 
 ---
 
@@ -280,7 +287,8 @@ Being able to simulate the outcomes of actions in varied environments will revol
 
 [arXiv](https://arxiv.org/abs/2602.06949) · [ICML](https://icml.cc/virtual/2026/poster/65193) · [OpenReview](https://openreview.net/forum?id=FuvU7PTyED)
 
-**Author X post:** _TODO: verify author thread_
+**Author X post:** https://x.com/DrJimFan/status/2024895359236051274
+**Tag:** DrJimFan
 
 ---
 
@@ -289,7 +297,7 @@ Being able to simulate the outcomes of actions in varied environments will revol
 
 Recently, studies exemplified by Hyper-Connections (HC) have extended the ubiquitous residual connection paradigm established over the past decade by expanding the residual stream width and…
 
-[arXiv](https://arxiv.org/abs/2512.24880) · [code](https://github.com/tokenbender/mHC-manifold-constrained-hyper-connections) · [ICML](https://icml.cc/virtual/2026/poster/61870) · [OpenReview](https://openreview.net/forum?id=mDhyxu8WRb)
+[arXiv](https://arxiv.org/abs/2512.24880) · [ICML](https://icml.cc/virtual/2026/poster/61870) · [OpenReview](https://openreview.net/forum?id=mDhyxu8WRb)
 
 **Author X post:** _TODO: verify author thread_
 
@@ -303,6 +311,7 @@ Adapting language models (LMs) to new tasks via post-training carries the risk o
 [arXiv](https://arxiv.org/abs/2510.18874) · [code](https://github.com/princeton-pli/retaining-by-doing) · [ICML](https://icml.cc/virtual/2026/poster/64375) · [OpenReview](https://openreview.net/forum?id=ODTM64azGa)
 
 **Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @HowardChenGMBP
 
 ---
 
@@ -335,7 +344,8 @@ Recent reinforcement learning (RL) techniques have yielded impressive reasoning 
 
 [arXiv](https://arxiv.org/abs/2512.07783) · [code](https://github.com/Interplay-LM-Reasoning/Interplay-LM-Reasoning) · [ICML](https://icml.cc/virtual/2026/poster/63850) · [OpenReview](https://openreview.net/forum?id=TBaUfO9znF)
 
-**Author X post:** _TODO: verify author thread_
+**Author X post:** https://x.com/xiangyue96/status/1998488030836044112
+**Tag:** xiangyue96
 
 ---
 
@@ -402,7 +412,7 @@ A long-term goal of language agents is to learn and improve through their own ex
 [arXiv](https://arxiv.org/abs/2510.08558) · [code](https://github.com/langfengQ/verl-agent) · [ICML](https://icml.cc/virtual/2026/poster/64488) · [OpenReview](https://openreview.net/forum?id=N3dXUHY5dD)
 
 **Author X post:** https://x.com/langfengq/status/1930848580505620677
-**Tag:** langfengq YSLIU627 MakeKJ FabianSchuetze
+**Tag:** langfengq YSLIU627
 
 ---
 

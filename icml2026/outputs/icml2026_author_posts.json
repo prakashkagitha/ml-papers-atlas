@@ -52,7 +52,7 @@
     "title": "WISE: World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation",
     "citation_count": "173",
     "arxiv": "2503.07265",
-    "github_repo": "",
+    "github_repo": "https://github.com/PKU-YuanGroup/WISE",
     "hf_page": "https://huggingface.co/papers/2503.07265",
     "candidate_post_urls": [],
     "candidate_handles": [],
@@ -68,8 +68,10 @@
     "hf_page": "https://huggingface.co/papers/2601.18734",
     "candidate_post_urls": [],
     "candidate_handles": [],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/siyan_zhao/status/2014372747862999382",
+    "tag_handles": [
+      "siyan_zhao"
+    ]
   },
   "NUyt4uxzx0": {
     "rank": "6",
@@ -79,7 +81,9 @@
     "github_repo": "",
     "hf_page": "https://huggingface.co/papers/2503.08679",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "NeelNanda5"
+    ],
     "author_post_url": "",
     "tag_handles": []
   },
@@ -119,8 +123,11 @@
       "miguelrc",
       "18vijayb"
     ],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/scale_AI/status/1969883270277153234",
+    "tag_handles": [
+      "vbingliu",
+      "scale_AI"
+    ]
   },
   "qA6FgH0nnZ": {
     "rank": "10",
@@ -131,8 +138,10 @@
     "hf_page": "https://huggingface.co/papers/2601.19897",
     "candidate_post_urls": [],
     "candidate_handles": [],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/IdanShenfeld/status/2016818116441850172",
+    "tag_handles": [
+      "IdanShenfeld"
+    ]
   },
   "z9Bo4eXSpW": {
     "rank": "11",
@@ -155,8 +164,10 @@
     "hf_page": "https://huggingface.co/papers/2507.00432",
     "candidate_post_urls": [],
     "candidate_handles": [],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/xiangyue96/status/1940494376133869947",
+    "tag_handles": [
+      "xiangyue96"
+    ]
   },
   "Y1rHxA58If": {
     "rank": "13",
@@ -183,9 +194,11 @@
     "candidate_handles": [
       "dch"
     ],
-    "author_post_url": "https://x.com/dch/status/1978471395173740900",
+    "author_post_url": "https://x.com/shi_weiyan/status/1978453323167490245",
     "tag_handles": [
-      "dch"
+      "shi_weiyan",
+      "JiayiZhang0427",
+      "chrmanning"
     ]
   },
   "BamDfCP5R3": {
@@ -233,8 +246,10 @@
     "hf_page": "https://huggingface.co/papers/2601.02553",
     "candidate_post_urls": [],
     "candidate_handles": [],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/HuaxiuYaoML/status/2039923459841523807",
+    "tag_handles": [
+      "HuaxiuYaoML"
+    ]
   },
   "GfSwkDSr8J": {
     "rank": "19",
@@ -247,15 +262,18 @@
     "candidate_handles": [
       "TencentHunyuan"
     ],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/DylanTFWang/status/2001146210779115550",
+    "tag_handles": [
+      "DylanTFWang",
+      "TencentHunyuan"
+    ]
   },
   "gz7hVnrRWq": {
     "rank": "20",
     "title": "Advancing LLM Reasoning with Natural Language and Numerical Feedback",
     "citation_count": "71",
     "arxiv": "2506.03106",
-    "github_repo": "",
+    "github_repo": "https://github.com/zhangxy-2019/critique-GRPO",
     "hf_page": "https://huggingface.co/papers/2506.03106",
     "candidate_post_urls": [],
     "candidate_handles": [],
@@ -283,8 +301,12 @@
     "hf_page": "https://huggingface.co/papers/2511.19399",
     "candidate_post_urls": [],
     "candidate_handles": [],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/faeze_brh/status/1990839185117491266",
+    "tag_handles": [
+      "faeze_brh",
+      "allen_ai",
+      "HannaHajishirzi"
+    ]
   },
   "BYInOck3gr": {
     "rank": "23",
@@ -306,7 +328,9 @@
     "github_repo": "https://github.com/test-time-training/discover",
     "hf_page": "https://huggingface.co/papers/2601.16175",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "mertyuksekgonul"
+    ],
     "author_post_url": "",
     "tag_handles": []
   },
@@ -319,20 +343,23 @@
     "hf_page": "https://huggingface.co/papers/2602.06949",
     "candidate_post_urls": [],
     "candidate_handles": [],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/DrJimFan/status/2024895359236051274",
+    "tag_handles": [
+      "DrJimFan"
+    ]
   },
   "mDhyxu8WRb": {
     "rank": "26",
     "title": "mHC: Manifold-Constrained Hyper-Connections",
     "citation_count": "55",
     "arxiv": "2512.24880",
-    "github_repo": "https://github.com/tokenbender/mHC-manifold-constrained-hyper-connections",
+    "github_repo": "",
     "hf_page": "https://huggingface.co/papers/2512.24880",
     "candidate_post_urls": [],
     "candidate_handles": [],
     "author_post_url": "",
-    "tag_handles": []
+    "tag_handles": [],
+    "repo_note": "community reimplementation (DeepSeek paper has no official repo)"
   },
   "ODTM64azGa": {
     "rank": "27",
@@ -342,7 +369,9 @@
     "github_repo": "https://github.com/princeton-pli/retaining-by-doing",
     "hf_page": "https://huggingface.co/papers/2510.18874",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "HowardChenGMBP"
+    ],
     "author_post_url": "",
     "tag_handles": []
   },
@@ -379,8 +408,10 @@
     "hf_page": "https://huggingface.co/papers/2512.07783",
     "candidate_post_urls": [],
     "candidate_handles": [],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/xiangyue96/status/1998488030836044112",
+    "tag_handles": [
+      "xiangyue96"
+    ]
   },
   "npsWK8rgYO": {
     "rank": "31",
@@ -461,9 +492,7 @@
     "author_post_url": "https://x.com/langfengq/status/1930848580505620677",
     "tag_handles": [
       "langfengq",
-      "YSLIU627",
-      "MakeKJ",
-      "FabianSchuetze"
+      "YSLIU627"
     ]
   },
   "EvmCeoiKYI": {
