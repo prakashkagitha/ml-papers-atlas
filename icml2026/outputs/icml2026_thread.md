@@ -1,6 +1,6 @@
-# ICML 2026 — Top 50 most-cited accepted papers
+# ICML 2026 — Top 50 accepted papers by impact
 
-Citation counts via Semantic Scholar (snapshot). Top 30 by citations, extended to 50 (papers past #30 kept only if > 25 citations). GitHub stars shown as an adoption cross-check.
+Primarily ranked by Semantic Scholar citations (top 30 by citations, extended to 50 while > 25 citations). The **top 5 papers by GitHub stars** are woven into the first 10 entries, so the head reflects both citation impact and code adoption (several papers top both). Each entry shows citation count and live GitHub stars.
 
 > For each paper: the author/lab X post to **quote/RT** is in `author_post_url` (blank = not yet verified). Tag the listed handles. Avoid RT-ing paper-sharing accounts (@_akhaliq, @HuggingPapers, ...).
 
@@ -16,194 +16,7 @@ Existing benchmarks for conversational AI agents simulate *single-control* envir
 
 ---
 
-## 2. RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation
-*Tianxing Chen et al. — 270 citations · 2489★ GitHub*
-
-Simulation-based data synthesis has emerged as a powerful paradigm for enhancing real-world robotic manipulation.
-
-[arXiv](https://arxiv.org/abs/2506.18088) · [code](https://github.com/RoboTwin-Platform/RoboTwin) · [ICML](https://icml.cc/virtual/2026/poster/62192) · [OpenReview](https://openreview.net/forum?id=itonej9GIV)
-
-**Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @MarioChan2002
-
----
-
-## 3. Spurious Rewards: Rethinking Training Signals in RLVR
-*Rulin Shao et al. — 184 citations · 358★ GitHub*
-
-We show that reinforcement learning with verifiable rewards (RLVR) can elicit strong mathematical reasoning in certain language models even with spurious rewards that have little, no, or outright…
-
-[arXiv](https://arxiv.org/abs/2506.10947) · [code](https://github.com/ruixin31/Spurious_Rewards) · [ICML](https://icml.cc/virtual/2026/poster/61082) · [OpenReview](https://openreview.net/forum?id=tqTNOpkP5j)
-
-**Author X post:** https://x.com/StellaLisy/status/1927392717593526780
-**Tag:** StellaLisy
-
----
-
-## 4. WISE: World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation
-*Yuwei Niu et al. — 173 citations · 208★ GitHub*
-
-Text-to-Image (T2I) models are capable of generating high-quality artistic creations and visual content.
-
-[arXiv](https://arxiv.org/abs/2503.07265) · [code](https://github.com/PKU-YuanGroup/WISE) · [ICML](https://icml.cc/virtual/2026/poster/62614) · [OpenReview](https://openreview.net/forum?id=f1q8dFnxtY)
-
-**Author X post:** _TODO: verify author thread_
-
----
-
-## 5. Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models
-*Siyan Zhao et al. — 151 citations*
-
-Knowledge distillation improves large language model (LLM) reasoning by compressing the knowledge of a teacher LLM to train smaller LLMs.
-
-[arXiv](https://arxiv.org/abs/2601.18734) · [ICML](https://icml.cc/virtual/2026/poster/64784) · [OpenReview](https://openreview.net/forum?id=Jpxfof0EaS)
-
-**Author X post:** https://x.com/siyan_zhao/status/2014372747862999382
-**Tag:** siyan_zhao
-
----
-
-## 6. Chain-of-Thought Reasoning In The Wild Is Not Always Faithful
-*Iván Arcuschin et al. — 143 citations*
-
-Recent studies indicate that when faced with explicit biases in prompts, models often omit mentioning these biases in their Chain-of-Thought (CoT) output, revealing that verbalized reasoning can…
-
-[arXiv](https://arxiv.org/abs/2503.08679) · [ICML](https://icml.cc/virtual/2026/poster/64450) · [OpenReview](https://openreview.net/forum?id=NUyt4uxzx0)
-
-**Author X post:** https://x.com/ArthurConmy/status/1874920611354718438
-**Tag:** IvanArcus ArthurConmy NeelNanda5
-
----
-
-## 7. dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
-*Zhiyuan Liu et al. — 141 citations · 207★ GitHub*
-
-Autoregressive Models (ARMs) have long dominated the landscape of Large Language Models.
-
-[arXiv](https://arxiv.org/abs/2506.06295) · [code](https://github.com/maomaocun/dLLM-cache) · [ICML](https://icml.cc/virtual/2026/poster/62405) · [OpenReview](https://openreview.net/forum?id=guLrgDb2jB)
-
-**Author X post:** _TODO: verify author thread_
-
----
-
-## 8. Reinforcement Learning via Self-Distillation
-*Jonas Hübotter et al. — 140 citations*
-
-Large language models are increasingly post-trained with reinforcement learning in verifiable domains such as code and math.
-
-[arXiv](https://arxiv.org/abs/2601.20802) · [ICML](https://icml.cc/virtual/2026/poster/64121) · [OpenReview](https://openreview.net/forum?id=QkfkxyRizZ)
-
-**Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @jonashuebotter
-
----
-
-## 9. SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?
-*Xiang Deng et al. — 120 citations · 453★ GitHub*
-
-We present SWE-Bench Pro, a comprehensive benchmark designed to evaluate software engineering capabilities through complex, realistic programming challenges.
-
-[arXiv](https://arxiv.org/abs/2509.16941) · [code](https://github.com/scaleapi/SWE-bench_Pro-os) · [ICML](https://icml.cc/virtual/2026/poster/61047) · [OpenReview](https://openreview.net/forum?id=uEVTdoAbnK)
-
-**Author X post:** https://x.com/vbingliu/status/1969460781495566611
-**Tag:** vbingliu scale_AI
-
----
-
-## 10. Self-Distillation Enables Continual Learning
-*Idan Shenfeld et al. — 102 citations · 632★ GitHub · Spotlight*
-
-Continual learning, enabling models to acquire new skills and knowledge without degrading existing capabilities, remains a fundamental challenge for foundation models.
-
-[arXiv](https://arxiv.org/abs/2601.19897) · [code](https://github.com/idanshen/Self-Distillation) · [ICML](https://icml.cc/virtual/2026/poster/61434) · [OpenReview](https://openreview.net/forum?id=qA6FgH0nnZ)
-
-**Author X post:** https://x.com/IdanShenfeld/status/2016818116441850172
-**Tag:** IdanShenfeld
-
----
-
-## 11. Reinforcement Learning with Verifiable Rewards: GRPO's Loss, Dynamics, and Success Amplification
-*Youssef Mroueh et al. — 100 citations*
-
-Group Relative Policy Optimization (GRPO) was introduced recently and used to train DeepSeek\textendash R1 for promoting reasoning in LLMs under verifiable (binary) rewards.
-
-[arXiv](https://arxiv.org/abs/2503.06639) · [ICML](https://icml.cc/virtual/2026/poster/60548) · [OpenReview](https://openreview.net/forum?id=z9Bo4eXSpW)
-
-**Author X post:** _TODO: verify author thread_
-
----
-
-## 12. Does Math Reasoning Improve General LLM Capabilities? Understanding Transferability of LLM Reasoning
-*Maggie Ziyu Huan et al. — 89 citations · 110★ GitHub*
-
-Math reasoning has become the poster child of progress in large language models (LLMs), with new models rapidly surpassing human-level performance on benchmarks like MATH and AIME.
-
-[arXiv](https://arxiv.org/abs/2507.00432) · [code](https://github.com/ReasoningTransfer/Transferability-of-LLM-Reasoning) · [ICML](https://icml.cc/virtual/2026/poster/65125) · [OpenReview](https://openreview.net/forum?id=GbOD25IA88)
-
-**Author X post:** https://x.com/xiangyue96/status/1940494376133869947
-**Tag:** xiangyue96
-
----
-
-## 13. GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization
-*Shih-Yang Liu et al. — 89 citations · 480★ GitHub*
-
-As language models become increasingly capable, users expect them to provide not only accurate responses but also behaviors aligned with diverse human preferences across a variety of scenarios.
-
-[arXiv](https://arxiv.org/abs/2601.05242) · [code](https://github.com/NVlabs/GDPO) · [ICML](https://icml.cc/virtual/2026/poster/63333) · [OpenReview](https://openreview.net/forum?id=Y1rHxA58If)
-
-**Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @shizhediao
-
----
-
-## 14. Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity
-*Jiayi Zhang et al. — 78 citations · 771★ GitHub*
-
-Post-training alignment often reduces LLM diversity, leading to a phenomenon known as mode collapse.
-
-[arXiv](https://arxiv.org/abs/2510.01171) · [code](https://github.com/CHATS-lab/verbalized-sampling) · [ICML](https://icml.cc/virtual/2026/poster/60489) · [OpenReview](https://openreview.net/forum?id=zloIrd77G5)
-
-**Author X post:** https://x.com/shi_weiyan/status/1978453323167490245
-**Tag:** shi_weiyan JiayiZhang0427 chrmanning
-
----
-
-## 15. From Interactions to Principles: Experience-Driven Self-Distillation for Evolving LLM Agents
-*Rong Wu et al. — 77 citations*
-
-LLM agents have achieved strong performance in tool-augmented reasoning, but most remain largely stateless: after each episode, the agent discards interaction traces and does not accumulate reusable…
-
-[arXiv](https://arxiv.org/abs/2510.16079) · [ICML](https://icml.cc/virtual/2026/poster/65641) · [OpenReview](https://openreview.net/forum?id=BamDfCP5R3)
-
-**Author X post:** _TODO: verify author thread_
-
----
-
-## 16. Scaling Long-Horizon Agent via Context Folding
-*Weiwei Sun et al. — 77 citations*
-
-Large language model (LLM) agents are fundamentally constrained by context length on long-horizon tasks.
-
-[arXiv](https://arxiv.org/abs/2510.11967) · [ICML](https://icml.cc/virtual/2026/poster/61950) · [OpenReview](https://openreview.net/forum?id=lNRgWoGfYg)
-
-**Author X post:** _TODO: verify author thread_
-
----
-
-## 17. Vision-Language-Action Pretraining from Large-Scale Human Videos
-*Hao Luo et al. — 76 citations*
-
-Existing Vision-Language-Action (VLA) models struggle with complex manipulation tasks requiring high dexterity and generalization, primarily due to their reliance on synthetic data with significant…
-
-[arXiv](https://arxiv.org/abs/2507.15597) · [ICML](https://icml.cc/virtual/2026/poster/62813) · [OpenReview](https://openreview.net/forum?id=d2TFven78P)
-
-**Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @beingbeyond_
-
----
-
-## 18. SimpleMem: Efficient Lifelong Memory for LLM Agents
+## 2. SimpleMem: Efficient Lifelong Memory for LLM Agents
 *Jiaqi Liu et al. — 74 citations · 3541★ GitHub*
 
 To support long-term interaction in complex environments, LLM agents require memory systems that manage historical experiences.
@@ -215,7 +28,43 @@ To support long-term interaction in complex environments, LLM agents require mem
 
 ---
 
-## 19. WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling
+## 3. RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation
+*Tianxing Chen et al. — 270 citations · 2489★ GitHub*
+
+Simulation-based data synthesis has emerged as a powerful paradigm for enhancing real-world robotic manipulation.
+
+[arXiv](https://arxiv.org/abs/2506.18088) · [code](https://github.com/RoboTwin-Platform/RoboTwin) · [ICML](https://icml.cc/virtual/2026/poster/62192) · [OpenReview](https://openreview.net/forum?id=itonej9GIV)
+
+**Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @MarioChan2002
+
+---
+
+## 4. Agent Learning via Early Experience
+*Kai Zhang et al. — 44 citations · 2049★ GitHub*
+
+A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks.
+
+[arXiv](https://arxiv.org/abs/2510.08558) · [code](https://github.com/langfengQ/verl-agent) · [ICML](https://icml.cc/virtual/2026/poster/64488) · [OpenReview](https://openreview.net/forum?id=N3dXUHY5dD)
+
+**Author X post:** https://x.com/langfengq/status/1930848580505620677
+**Tag:** langfengq YSLIU627
+
+---
+
+## 5. Spurious Rewards: Rethinking Training Signals in RLVR
+*Rulin Shao et al. — 184 citations · 358★ GitHub*
+
+We show that reinforcement learning with verifiable rewards (RLVR) can elicit strong mathematical reasoning in certain language models even with spurious rewards that have little, no, or outright…
+
+[arXiv](https://arxiv.org/abs/2506.10947) · [code](https://github.com/ruixin31/Spurious_Rewards) · [ICML](https://icml.cc/virtual/2026/poster/61082) · [OpenReview](https://openreview.net/forum?id=tqTNOpkP5j)
+
+**Author X post:** https://x.com/StellaLisy/status/1927392717593526780
+**Tag:** StellaLisy
+
+---
+
+## 6. WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling
 *Wenqiang Sun et al. — 74 citations · 1530★ GitHub*
 
 This paper presents WorldPlay, a streaming video diffusion model that enables real-time, interactive world modeling with long-term geometric consistency, resolving the trade-off between speed and…
@@ -227,7 +76,170 @@ This paper presents WorldPlay, a streaming video diffusion model that enables re
 
 ---
 
-## 20. Advancing LLM Reasoning with Natural Language and Numerical Feedback
+## 7. WISE: World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation
+*Yuwei Niu et al. — 173 citations · 208★ GitHub*
+
+Text-to-Image (T2I) models are capable of generating high-quality artistic creations and visual content.
+
+[arXiv](https://arxiv.org/abs/2503.07265) · [code](https://github.com/PKU-YuanGroup/WISE) · [ICML](https://icml.cc/virtual/2026/poster/62614) · [OpenReview](https://openreview.net/forum?id=f1q8dFnxtY)
+
+**Author X post:** _TODO: verify author thread_
+
+---
+
+## 8. Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models
+*Siyan Zhao et al. — 151 citations*
+
+Knowledge distillation improves large language model (LLM) reasoning by compressing the knowledge of a teacher LLM to train smaller LLMs.
+
+[arXiv](https://arxiv.org/abs/2601.18734) · [ICML](https://icml.cc/virtual/2026/poster/64784) · [OpenReview](https://openreview.net/forum?id=Jpxfof0EaS)
+
+**Author X post:** https://x.com/siyan_zhao/status/2014372747862999382
+**Tag:** siyan_zhao
+
+---
+
+## 9. Chain-of-Thought Reasoning In The Wild Is Not Always Faithful
+*Iván Arcuschin et al. — 143 citations*
+
+Recent studies indicate that when faced with explicit biases in prompts, models often omit mentioning these biases in their Chain-of-Thought (CoT) output, revealing that verbalized reasoning can…
+
+[arXiv](https://arxiv.org/abs/2503.08679) · [ICML](https://icml.cc/virtual/2026/poster/64450) · [OpenReview](https://openreview.net/forum?id=NUyt4uxzx0)
+
+**Author X post:** https://x.com/ArthurConmy/status/1874920611354718438
+**Tag:** IvanArcus ArthurConmy NeelNanda5
+
+---
+
+## 10. dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
+*Zhiyuan Liu et al. — 141 citations · 207★ GitHub*
+
+Autoregressive Models (ARMs) have long dominated the landscape of Large Language Models.
+
+[arXiv](https://arxiv.org/abs/2506.06295) · [code](https://github.com/maomaocun/dLLM-cache) · [ICML](https://icml.cc/virtual/2026/poster/62405) · [OpenReview](https://openreview.net/forum?id=guLrgDb2jB)
+
+**Author X post:** _TODO: verify author thread_
+
+---
+
+## 11. Reinforcement Learning via Self-Distillation
+*Jonas Hübotter et al. — 140 citations*
+
+Large language models are increasingly post-trained with reinforcement learning in verifiable domains such as code and math.
+
+[arXiv](https://arxiv.org/abs/2601.20802) · [ICML](https://icml.cc/virtual/2026/poster/64121) · [OpenReview](https://openreview.net/forum?id=QkfkxyRizZ)
+
+**Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @jonashuebotter
+
+---
+
+## 12. SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?
+*Xiang Deng et al. — 120 citations · 453★ GitHub*
+
+We present SWE-Bench Pro, a comprehensive benchmark designed to evaluate software engineering capabilities through complex, realistic programming challenges.
+
+[arXiv](https://arxiv.org/abs/2509.16941) · [code](https://github.com/scaleapi/SWE-bench_Pro-os) · [ICML](https://icml.cc/virtual/2026/poster/61047) · [OpenReview](https://openreview.net/forum?id=uEVTdoAbnK)
+
+**Author X post:** https://x.com/vbingliu/status/1969460781495566611
+**Tag:** vbingliu scale_AI
+
+---
+
+## 13. Self-Distillation Enables Continual Learning
+*Idan Shenfeld et al. — 102 citations · 632★ GitHub · Spotlight*
+
+Continual learning, enabling models to acquire new skills and knowledge without degrading existing capabilities, remains a fundamental challenge for foundation models.
+
+[arXiv](https://arxiv.org/abs/2601.19897) · [code](https://github.com/idanshen/Self-Distillation) · [ICML](https://icml.cc/virtual/2026/poster/61434) · [OpenReview](https://openreview.net/forum?id=qA6FgH0nnZ)
+
+**Author X post:** https://x.com/IdanShenfeld/status/2016818116441850172
+**Tag:** IdanShenfeld
+
+---
+
+## 14. Reinforcement Learning with Verifiable Rewards: GRPO's Loss, Dynamics, and Success Amplification
+*Youssef Mroueh et al. — 100 citations*
+
+Group Relative Policy Optimization (GRPO) was introduced recently and used to train DeepSeek\textendash R1 for promoting reasoning in LLMs under verifiable (binary) rewards.
+
+[arXiv](https://arxiv.org/abs/2503.06639) · [ICML](https://icml.cc/virtual/2026/poster/60548) · [OpenReview](https://openreview.net/forum?id=z9Bo4eXSpW)
+
+**Author X post:** _TODO: verify author thread_
+
+---
+
+## 15. Does Math Reasoning Improve General LLM Capabilities? Understanding Transferability of LLM Reasoning
+*Maggie Ziyu Huan et al. — 89 citations · 110★ GitHub*
+
+Math reasoning has become the poster child of progress in large language models (LLMs), with new models rapidly surpassing human-level performance on benchmarks like MATH and AIME.
+
+[arXiv](https://arxiv.org/abs/2507.00432) · [code](https://github.com/ReasoningTransfer/Transferability-of-LLM-Reasoning) · [ICML](https://icml.cc/virtual/2026/poster/65125) · [OpenReview](https://openreview.net/forum?id=GbOD25IA88)
+
+**Author X post:** https://x.com/xiangyue96/status/1940494376133869947
+**Tag:** xiangyue96
+
+---
+
+## 16. GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization
+*Shih-Yang Liu et al. — 89 citations · 480★ GitHub*
+
+As language models become increasingly capable, users expect them to provide not only accurate responses but also behaviors aligned with diverse human preferences across a variety of scenarios.
+
+[arXiv](https://arxiv.org/abs/2601.05242) · [code](https://github.com/NVlabs/GDPO) · [ICML](https://icml.cc/virtual/2026/poster/63333) · [OpenReview](https://openreview.net/forum?id=Y1rHxA58If)
+
+**Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @shizhediao
+
+---
+
+## 17. Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity
+*Jiayi Zhang et al. — 78 citations · 771★ GitHub*
+
+Post-training alignment often reduces LLM diversity, leading to a phenomenon known as mode collapse.
+
+[arXiv](https://arxiv.org/abs/2510.01171) · [code](https://github.com/CHATS-lab/verbalized-sampling) · [ICML](https://icml.cc/virtual/2026/poster/60489) · [OpenReview](https://openreview.net/forum?id=zloIrd77G5)
+
+**Author X post:** https://x.com/shi_weiyan/status/1978453323167490245
+**Tag:** shi_weiyan JiayiZhang0427 chrmanning
+
+---
+
+## 18. From Interactions to Principles: Experience-Driven Self-Distillation for Evolving LLM Agents
+*Rong Wu et al. — 77 citations*
+
+LLM agents have achieved strong performance in tool-augmented reasoning, but most remain largely stateless: after each episode, the agent discards interaction traces and does not accumulate reusable…
+
+[arXiv](https://arxiv.org/abs/2510.16079) · [ICML](https://icml.cc/virtual/2026/poster/65641) · [OpenReview](https://openreview.net/forum?id=BamDfCP5R3)
+
+**Author X post:** _TODO: verify author thread_
+
+---
+
+## 19. Scaling Long-Horizon Agent via Context Folding
+*Weiwei Sun et al. — 77 citations*
+
+Large language model (LLM) agents are fundamentally constrained by context length on long-horizon tasks.
+
+[arXiv](https://arxiv.org/abs/2510.11967) · [ICML](https://icml.cc/virtual/2026/poster/61950) · [OpenReview](https://openreview.net/forum?id=lNRgWoGfYg)
+
+**Author X post:** _TODO: verify author thread_
+
+---
+
+## 20. Vision-Language-Action Pretraining from Large-Scale Human Videos
+*Hao Luo et al. — 76 citations*
+
+Existing Vision-Language-Action (VLA) models struggle with complex manipulation tasks requiring high dexterity and generalization, primarily due to their reliance on synthetic data with significant…
+
+[arXiv](https://arxiv.org/abs/2507.15597) · [ICML](https://icml.cc/virtual/2026/poster/62813) · [OpenReview](https://openreview.net/forum?id=d2TFven78P)
+
+**Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @beingbeyond_
+
+---
+
+## 21. Advancing LLM Reasoning with Natural Language and Numerical Feedback
 *Xiaoying Zhang et al. — 71 citations · 69★ GitHub · Spotlight*
 
 Recent advances in reinforcement learning (RL) using numerical rewards have significantly enhanced the complex reasoning capabilities of large language models (LLMs).
@@ -238,7 +250,7 @@ Recent advances in reinforcement learning (RL) using numerical rewards have sign
 
 ---
 
-## 21. Discrete Diffusion VLA: Bringing Discrete Diffusion to Action Decoding in Vision-Language-Action Policies
+## 22. Discrete Diffusion VLA: Bringing Discrete Diffusion to Action Decoding in Vision-Language-Action Policies
 *Zhixuan Liang et al. — 67 citations · 419★ GitHub*
 
 Vision–Language–Action (VLA) models adapt large vision–language backbones to map images and instructions into robot actions.
@@ -249,7 +261,7 @@ Vision–Language–Action (VLA) models adapt large vision–language backbones 
 
 ---
 
-## 22. Reinforcement Learning with Evolving Rubrics for Deep Research
+## 23. Reinforcement Learning with Evolving Rubrics for Deep Research
 *Rulin Shao et al. — 61 citations · Oral*
 
 Deep research agents perform multi-step research to produce long-form, well-attributed answers.
@@ -261,7 +273,7 @@ Deep research agents perform multi-step research to produce long-form, well-attr
 
 ---
 
-## 23. Causal Forcing: Autoregressive Diffusion Distillation Done Right for High-Quality Real-Time Video Generation
+## 24. Causal Forcing: Autoregressive Diffusion Distillation Done Right for High-Quality Real-Time Video Generation
 *Hongzhou Zhu et al. — 59 citations*
 
 To achieve real-time video generation, current approaches distill pretrained bidirectional video diffusion models into few-step autoregressive (AR) models.
@@ -272,7 +284,7 @@ To achieve real-time video generation, current approaches distill pretrained bid
 
 ---
 
-## 24. Learning to Discover at Test Time
+## 25. Learning to Discover at Test Time
 *Mert Yuksekgonul et al. — 56 citations · 591★ GitHub · Spotlight*
 
 How can we use AI to discover a new state of the art for a scientific problem?
@@ -284,7 +296,7 @@ How can we use AI to discover a new state of the art for a scientific problem?
 
 ---
 
-## 25. DreamDojo: A Real-Time Robot World Model from Large-Scale Human Videos
+## 26. DreamDojo: A Real-Time Robot World Model from Large-Scale Human Videos
 *Shenyuan Gao et al. — 55 citations · Spotlight*
 
 Being able to simulate the outcomes of actions in varied environments will revolutionize the development of generalist agents at scale.
@@ -296,7 +308,7 @@ Being able to simulate the outcomes of actions in varied environments will revol
 
 ---
 
-## 26. mHC: Manifold-Constrained Hyper-Connections
+## 27. mHC: Manifold-Constrained Hyper-Connections
 *Zhenda Xie et al. — 55 citations · Spotlight*
 
 Recently, studies exemplified by Hyper-Connections (HC) have extended the ubiquitous residual connection paradigm established over the past decade by expanding the residual stream width and…
@@ -307,7 +319,7 @@ Recently, studies exemplified by Hyper-Connections (HC) have extended the ubiqui
 
 ---
 
-## 27. Retaining by Doing: The Role of On-Policy Data in Mitigating Forgetting
+## 28. Retaining by Doing: The Role of On-Policy Data in Mitigating Forgetting
 *Howard Chen et al. — 54 citations · 44★ GitHub*
 
 Adapting language models (LMs) to new tasks via post-training carries the risk of degrading existing capabilities -- a phenomenon classically known as catastrophic forgetting.
@@ -319,7 +331,7 @@ Adapting language models (LMs) to new tasks via post-training carries the risk o
 
 ---
 
-## 28. MemEvolve: Meta-Evolution of Agent Memory Systems
+## 29. MemEvolve: Meta-Evolution of Agent Memory Systems
 *Guibin Zhang et al. — 52 citations · 246★ GitHub*
 
 Self-evolving memory systems are rapidly reshaping the evolutionary paradigm of large language model (LLM)-based agents.
@@ -330,7 +342,7 @@ Self-evolving memory systems are rapidly reshaping the evolutionary paradigm of 
 
 ---
 
-## 29. ACON: Optimizing Context Compression for Long-horizon LLM Agents
+## 30. ACON: Optimizing Context Compression for Long-horizon LLM Agents
 *Minki Kang et al. — 51 citations · 89★ GitHub*
 
 Large language models (LLMs) are increasingly deployed as agents in dynamic real-world environments, where success depends on maintaining precise records of actions and observations.
@@ -341,7 +353,7 @@ Large language models (LLMs) are increasingly deployed as agents in dynamic real
 
 ---
 
-## 30. On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models
+## 31. On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models
 *Charlie Zhang et al. — 50 citations · 157★ GitHub · Spotlight*
 
 Recent reinforcement learning (RL) techniques have yielded impressive reasoning improvements in language models, yet it remains unclear whether post-training truly extends a model’s reasoning…
@@ -353,7 +365,7 @@ Recent reinforcement learning (RL) techniques have yielded impressive reasoning 
 
 ---
 
-## 31. TreePO: Enhancing Policy Efficacy and Inference Efficiency with Tree Modeling
+## 32. TreePO: Enhancing Policy Efficacy and Inference Efficiency with Tree Modeling
 *Yizhi Li et al. — 50 citations*
 
 Recent advancements in aligning large language models via reinforcement learning have achieved remarkable gains in solving complex reasoning problems, but at the cost of expensive on-policy rollouts…
@@ -364,7 +376,7 @@ Recent advancements in aligning large language models via reinforcement learning
 
 ---
 
-## 32. Efficient Reasoning with Hidden Thinking
+## 33. Efficient Reasoning with Hidden Thinking
 *Xuan Shen et al. — 49 citations*
 
 Chain-of-Thought (CoT) reasoning has become a powerful framework for improving complex problem-solving capabilities in Multimodal Large Language Models (MLLMs).
@@ -375,7 +387,7 @@ Chain-of-Thought (CoT) reasoning has become a powerful framework for improving c
 
 ---
 
-## 33. ATLAS: Learning to Optimally Memorize the Context at Test Time
+## 34. ATLAS: Learning to Optimally Memorize the Context at Test Time
 *Ali Behrouz et al. — 48 citations · 2★ GitHub*
 
 Transformers have been established as the most popular backbones in sequence modeling, mainly due to their effectiveness in in-context retrieval tasks and the ability to learn at scale.
@@ -386,7 +398,7 @@ Transformers have been established as the most popular backbones in sequence mod
 
 ---
 
-## 34. Multimodal Latent Language Modeling with Next-Token Diffusion
+## 35. Multimodal Latent Language Modeling with Next-Token Diffusion
 *Yutao Sun et al. — 45 citations · Spotlight*
 
 Multimodal generative models require a unified approach to handle both discrete data (e.g., text and code) and continuous data (e.g., image, audio, video).
@@ -397,7 +409,7 @@ Multimodal generative models require a unified approach to handle both discrete 
 
 ---
 
-## 35. SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience
+## 36. SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience
 *ZEYI SUN et al. — 45 citations · 250★ GitHub*
 
 Repurposing large vision-language models (LVLMs) as computer use agents (CUAs) has led to substantial breakthroughs, primarily driven by human-labeled data.
@@ -405,18 +417,6 @@ Repurposing large vision-language models (LVLMs) as computer use agents (CUAs) h
 [arXiv](https://arxiv.org/abs/2508.04700) · [code](https://github.com/SunzeY/SEAgent) · [ICML](https://icml.cc/virtual/2026/poster/65711) · [OpenReview](https://openreview.net/forum?id=AvBgmOGsdQ)
 
 **Author X post:** _TODO: verify author thread_
-
----
-
-## 36. Agent Learning via Early Experience
-*Kai Zhang et al. — 44 citations · 2049★ GitHub*
-
-A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks.
-
-[arXiv](https://arxiv.org/abs/2510.08558) · [code](https://github.com/langfengQ/verl-agent) · [ICML](https://icml.cc/virtual/2026/poster/64488) · [OpenReview](https://openreview.net/forum?id=N3dXUHY5dD)
-
-**Author X post:** https://x.com/langfengq/status/1930848580505620677
-**Tag:** langfengq YSLIU627
 
 ---
 

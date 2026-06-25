@@ -65,6 +65,66 @@ def load_stars(path: Path) -> Dict[str, Dict[str, str]]:
     return out
 
 
+def star_ranked_oids(posts: Dict[str, Any], stars_csv: Path, live_path: Path, top: int) -> List[str]:
+    """openreview_ids of the top-`top` papers by live GitHub stars, ranked over
+    the union of author-discovered repos and the ICML-2026 star harvest."""
+    live = json.loads(live_path.read_text()) if live_path.exists() else {}
+    oid_repo: Dict[str, str] = {}
+    for oid, v in posts.items():
+        if v.get("github_repo"):
+            oid_repo[oid] = v["github_repo"].rsplit("github.com/", 1)[-1].strip("/")
+    if stars_csv.exists():
+        for r in csv.DictReader(stars_csv.open(encoding="utf-8")):
+            oid = r.get("openreview_id") or ""
+            if not oid:
+                m = re.search(r"id=([^&\s]+)", r.get("openreview_url", "") or "")
+                oid = m.group(1) if m else ""
+            if oid and r.get("github_repo"):
+                oid_repo.setdefault(oid, r["github_repo"].rsplit("github.com/", 1)[-1].strip("/"))
+    scored = [(live.get(f) or 0, oid) for oid, f in oid_repo.items() if live.get(f)]
+    scored.sort(key=lambda t: t[0], reverse=True)
+    return [oid for _, oid in scored[:top]]
+
+
+def intersperse_stars(selected: List[Dict[str, str]], all_rows: List[Dict[str, str]],
+                      star_ids: List[str], head: int) -> List[Dict[str, str]]:
+    """Weave the star-ranked papers into the first `head` positions, alternating
+    with the citation order. Star papers not already in `selected` are pulled in
+    from the full citation rows. The remaining citation order follows unchanged."""
+    by_oid = {r["openreview_id"]: r for r in selected}
+    full = {r["openreview_id"]: r for r in all_rows}
+    for oid in star_ids:                       # ensure star papers are available
+        if oid not in by_oid and oid in full:
+            by_oid[oid] = full[oid]
+    cite_order = list(selected)
+    result: List[Dict[str, str]] = []
+    used: set = set()
+    ci = si = 0
+    take_star = False
+    while len(result) < head and (ci < len(cite_order) or si < len(star_ids)):
+        if take_star:
+            while si < len(star_ids) and (star_ids[si] in used or star_ids[si] not in by_oid):
+                si += 1
+            if si < len(star_ids):
+                oid = star_ids[si]; si += 1
+                result.append(by_oid[oid]); used.add(oid)
+        else:
+            while ci < len(cite_order) and cite_order[ci]["openreview_id"] in used:
+                ci += 1
+            if ci < len(cite_order):
+                r = cite_order[ci]; ci += 1
+                result.append(r); used.add(r["openreview_id"])
+        take_star = not take_star
+    # append the rest in citation order, then any leftover star papers
+    for r in cite_order:
+        if r["openreview_id"] not in used:
+            result.append(r); used.add(r["openreview_id"])
+    for oid in star_ids:
+        if oid not in used and oid in by_oid:
+            result.append(by_oid[oid]); used.add(oid)
+    return result
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--citations", default="outputs/icml2026_citations.csv")
@@ -75,6 +135,11 @@ def main() -> int:
     ap.add_argument("--base", type=int, default=30)
     ap.add_argument("--extend-to", type=int, default=50)
     ap.add_argument("--threshold", type=int, default=25)
+    ap.add_argument("--live-stars", default="outputs/_live_stars.json")
+    ap.add_argument("--star-top", type=int, default=5,
+                    help="number of most-starred papers to weave into the head")
+    ap.add_argument("--star-into", type=int, default=10,
+                    help="weave the most-starred papers into the first N entries")
     args = ap.parse_args()
 
     rows = list(csv.DictReader(Path(args.citations).open(encoding="utf-8")))
@@ -82,6 +147,9 @@ def main() -> int:
     posts = json.loads(Path(args.posts).read_text(encoding="utf-8")) if Path(args.posts).exists() else {}
 
     selected = select_papers(rows, args.base, args.extend_to, args.threshold)
+    star_ids = star_ranked_oids(posts, Path(args.stars), Path(args.live_stars), args.star_top)
+    if args.star_into and star_ids:
+        selected = intersperse_stars(selected, rows, star_ids, args.star_into)
 
     # flat CSV of the selected papers
     cols = ["rank", "title", "first_author", "citation_count", "github_stars",
@@ -113,11 +181,13 @@ def main() -> int:
     # markdown thread
     n = len(selected)
     lines: List[str] = []
-    lines.append(f"# ICML 2026 — Top {n} most-cited accepted papers")
+    lines.append(f"# ICML 2026 — Top {n} accepted papers by impact")
     lines.append("")
-    lines.append(f"Citation counts via Semantic Scholar (snapshot). Top {args.base} by citations, "
-                 f"extended to {n} (papers past #{args.base} kept only if > {args.threshold} citations). "
-                 "GitHub stars shown as an adoption cross-check.")
+    lines.append(f"Primarily ranked by Semantic Scholar citations (top {args.base} by citations, "
+                 f"extended to {n} while > {args.threshold} citations). The **top {args.star_top} "
+                 f"papers by GitHub stars** are woven into the first {args.star_into} entries, so the "
+                 "head reflects both citation impact and code adoption (several papers top both). "
+                 "Each entry shows citation count and live GitHub stars.")
     lines.append("")
     lines.append("> For each paper: the author/lab X post to **quote/RT** is in `author_post_url` "
                  "(blank = not yet verified). Tag the listed handles. Avoid RT-ing paper-sharing "
