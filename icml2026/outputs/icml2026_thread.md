@@ -49,7 +49,7 @@ A long-term goal of language agents is to learn and improve through their own ex
 [arXiv](https://arxiv.org/abs/2510.08558) · [code](https://github.com/langfengQ/verl-agent) · [ICML](https://icml.cc/virtual/2026/poster/64488) · [OpenReview](https://openreview.net/forum?id=N3dXUHY5dD)
 
 **Author X post:** https://x.com/langfengq/status/1930848580505620677
-**Tag:** [@langfengq](https://x.com/langfengq) [@YSLIU627](https://x.com/YSLIU627)
+**Tag:** [@langfengq](https://x.com/langfengq)
 
 ---
 

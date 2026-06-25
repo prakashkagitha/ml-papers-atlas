@@ -43,7 +43,7 @@ Code: https://github.com/RoboTwin-Platform/RoboTwin
 Agent Learning via Early Experience
 
 Kai Zhang et al. — 44 citations · 2049★ GitHub
-@langfengq @YSLIU627
+@langfengq
 
 A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks. However, training agents from experience data with reinforcement learning remains difficult in many environments, which either lack verifiable rewards (e.g., websites) or require inefficient long-horizon rollouts (e.g., multi-turn tool use).
 

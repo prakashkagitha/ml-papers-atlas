@@ -110,6 +110,9 @@ def gh_search_repo(title: str) -> str:
 
 
 def extract_posts(readme: str) -> Dict[str, List[str]]:
+    # Only handles taken from x.com / twitter.com links are real X handles.
+    # Bare "@mention" tokens in a GitHub README are GitHub usernames, NOT X
+    # handles, so we deliberately do NOT harvest them here.
     urls: List[str] = []
     handles: List[str] = []
     for m in X_URL_RE.finditer(readme):
@@ -118,8 +121,6 @@ def extract_posts(readme: str) -> Dict[str, List[str]]:
             urls.append(m.group(0))
         if handle not in {"intent", "share", "home", "search"}:
             handles.append(m.group(1))
-    for m in HANDLE_RE.finditer(readme):
-        handles.append(m.group(1))
 
     def rank(h: str) -> int:
         return 1 if h.lower() in SHARING_ACCOUNTS else 0

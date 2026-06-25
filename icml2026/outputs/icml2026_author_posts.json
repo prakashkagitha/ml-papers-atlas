@@ -135,10 +135,7 @@
     "github_repo": "https://github.com/scaleapi/SWE-bench_Pro-os",
     "hf_page": "https://huggingface.co/papers/2509.16941",
     "candidate_post_urls": [],
-    "candidate_handles": [
-      "miguelrc",
-      "18vijayb"
-    ],
+    "candidate_handles": [],
     "author_post_url": "https://x.com/vbingliu/status/1969460781495566611",
     "tag_handles": [
       "vbingliu",
@@ -527,15 +524,11 @@
       "https://x.com/langfengq/status/1930848580505620677"
     ],
     "candidate_handles": [
-      "langfengq",
-      "YSLIU627",
-      "MakeKJ",
-      "FabianSchuetze"
+      "langfengq"
     ],
     "author_post_url": "https://x.com/langfengq/status/1930848580505620677",
     "tag_handles": [
-      "langfengq",
-      "YSLIU627"
+      "langfengq"
     ],
     "github_stars": 2049
   },
