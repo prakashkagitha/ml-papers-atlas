@@ -177,6 +177,8 @@ def main() -> int:
     stars = load_stars(Path(args.stars))
     posts = json.loads(Path(args.posts).read_text(encoding="utf-8")) if Path(args.posts).exists() else {}
 
+    excluded = {oid for oid, v in posts.items() if v.get("exclude")}
+    rows = [r for r in rows if r.get("openreview_id") not in excluded]
     selected = select_papers(rows, args.base, args.extend_to, args.threshold)
     star_ids = star_ranked_oids(posts, Path(args.stars), Path(args.live_stars), args.star_top)
     if args.star_into and star_ids:

@@ -41,15 +41,15 @@ _Note: Corresponding authors Yao Mu & Ping Luo; first author Tianxing Chen. @Mar
 
 ---
 
-## 4. Agent Learning via Early Experience
-*Kai Zhang et al. — 44 citations · 2049★ GitHub*
+## 4. WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling
+*Wenqiang Sun et al. — 74 citations · 1530★ GitHub*
 
-A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks. However, training agents from experience data with reinforcement learning remains difficult in many environments, which either lack verifiable rewards (e.g., websites) or require inefficient long-horizon rollouts (e.g., multi-turn tool use).
+This paper presents WorldPlay, a streaming video diffusion model that enables real-time, interactive world modeling with long-term geometric consistency, resolving the trade-off between speed and memory that limits current methods.
 
-[arXiv](https://arxiv.org/abs/2510.08558) · [code](https://github.com/langfengQ/verl-agent) · [ICML](https://icml.cc/virtual/2026/poster/64488) · [OpenReview](https://openreview.net/forum?id=N3dXUHY5dD)
+[arXiv](https://arxiv.org/abs/2512.14614) · [code](https://github.com/Tencent-Hunyuan/HY-WorldPlay) · [ICML](https://icml.cc/virtual/2026/poster/65111) · [OpenReview](https://openreview.net/forum?id=GfSwkDSr8J)
 
-**Author X post:** https://x.com/langfengq/status/1930848580505620677
-**Tag:** [@langfengq](https://x.com/langfengq)
+**Author X post:** https://x.com/DylanTFWang/status/2001146210779115550
+**Tag:** [@DylanTFWang](https://x.com/DylanTFWang) [@TencentHunyuan](https://x.com/TencentHunyuan)
 
 ---
 
@@ -65,15 +65,14 @@ We show that reinforcement learning with verifiable rewards (RLVR) can elicit st
 
 ---
 
-## 6. WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling
-*Wenqiang Sun et al. — 74 citations · 1530★ GitHub*
+## 6. WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting
+*Yifan Liu et al. — 39 citations*
 
-This paper presents WorldPlay, a streaming video diffusion model that enables real-time, interactive world modeling with long-term geometric consistency, resolving the trade-off between speed and memory that limits current methods.
+We present WorldMirror, a unified feed-forward model for comprehensive 3D geometric prediction tasks. Unlike existing methods constrained to image-only inputs or customized for a specific task, our framework flexibly integrates diverse geometric priors, including camera poses, intrinsics, and depth maps, while simultaneously generating multiple 3D representations: dense point clouds, multi-view depth maps, camera parameters, surface normals, and 3D Gaussians.
 
-[arXiv](https://arxiv.org/abs/2512.14614) · [code](https://github.com/Tencent-Hunyuan/HY-WorldPlay) · [ICML](https://icml.cc/virtual/2026/poster/65111) · [OpenReview](https://openreview.net/forum?id=GfSwkDSr8J)
+[arXiv](https://arxiv.org/abs/2510.10726) · [ICML](https://icml.cc/virtual/2026/poster/65052) · [OpenReview](https://openreview.net/forum?id=HFNJOpXHfm)
 
-**Author X post:** https://x.com/DylanTFWang/status/2001146210779115550
-**Tag:** [@DylanTFWang](https://x.com/DylanTFWang) [@TencentHunyuan](https://x.com/TencentHunyuan)
+**Author X post:** _TODO: verify author thread_
 
 ---
 
@@ -537,18 +536,7 @@ _Note: Authors Christina Lu & Jack Lindsey (Anthropic); likely via Lindsey's acc
 
 ---
 
-## 47. WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting
-*Yifan Liu et al. — 39 citations*
-
-We present WorldMirror, a unified feed-forward model for comprehensive 3D geometric prediction tasks. Unlike existing methods constrained to image-only inputs or customized for a specific task, our framework flexibly integrates diverse geometric priors, including camera poses, intrinsics, and depth maps, while simultaneously generating multiple 3D representations: dense point clouds, multi-view depth maps, camera parameters, surface normals, and 3D Gaussians.
-
-[arXiv](https://arxiv.org/abs/2510.10726) · [ICML](https://icml.cc/virtual/2026/poster/65052) · [OpenReview](https://openreview.net/forum?id=HFNJOpXHfm)
-
-**Author X post:** _TODO: verify author thread_
-
----
-
-## 48. Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers
+## 47. Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers
 *Wenhan Ma et al. — 38 citations · 0★ GitHub*
 
 Reinforcement learning (RL) has emerged as a crucial approach for enhancing the capabilities of large language models. However, in Mixture-of-Experts (MoE) models, the routing mechanism often introduces instability, even leading to catastrophic RL training collapse.
@@ -559,7 +547,7 @@ Reinforcement learning (RL) has emerged as a crucial approach for enhancing the 
 
 ---
 
-## 49. ACTIVE-o3 : Empowering MLLMs with Active Perception via Pure Reinforcement Learning
+## 48. ACTIVE-o3 : Empowering MLLMs with Active Perception via Pure Reinforcement Learning
 *Muzhi Zhu et al. — 37 citations · 81★ GitHub*
 
 Active vision, also known as active perception, refers to actively selecting where and how to look in order to gather task-relevant information. It is a critical component of efficient perception and decision-making in humans and advanced embodied agents.
@@ -570,12 +558,23 @@ Active vision, also known as active perception, refers to actively selecting whe
 
 ---
 
-## 50. Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression
+## 49. Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression
 *Jung Yi et al. — 37 citations*
 
 Recent advances in autoregressive video diffusion have enabled real-time frame streaming, yet existing solutions still suffer from temporal repetition, drift, and motion deceleration. We find that naïvely applying StreamingLLM-style attention sinks to video diffusion leads to fidelity degradation and motion stagnation.
 
 [arXiv](https://arxiv.org/abs/2512.05081) · [ICML](https://icml.cc/virtual/2026/poster/62407) · [OpenReview](https://openreview.net/forum?id=gtmyFnvXAW)
+
+**Author X post:** _TODO: verify author thread_
+
+---
+
+## 50. Entropy-Aware On-Policy Distillation of Language Models
+*Woogyeol Jin et al. — 37 citations*
+
+On-policy distillation is a promising approach for transferring knowledge between language models, where a student learns from dense token-level signals along its own trajectories. This framework typically uses reverse KL divergence, encouraging the student to match the teacher's high-confidence predictions.
+
+[arXiv](https://arxiv.org/abs/2603.07079) · [ICML](https://icml.cc/virtual/2026/poster/64855) · [OpenReview](https://openreview.net/forum?id=J5i09faOOf)
 
 **Author X post:** _TODO: verify author thread_
 

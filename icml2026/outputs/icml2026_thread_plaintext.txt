@@ -40,17 +40,17 @@ Code: https://github.com/RoboTwin-Platform/RoboTwin
 
 ----
 
-Agent Learning via Early Experience
+WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling
 
-Kai Zhang et al. — 44 citations · 2049★ GitHub
-@langfengq
+Wenqiang Sun et al. — 74 citations · 1530★ GitHub
+@DylanTFWang @TencentHunyuan
 
-A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks. However, training agents from experience data with reinforcement learning remains difficult in many environments, which either lack verifiable rewards (e.g., websites) or require inefficient long-horizon rollouts (e.g., multi-turn tool use).
+This paper presents WorldPlay, a streaming video diffusion model that enables real-time, interactive world modeling with long-term geometric consistency, resolving the trade-off between speed and memory that limits current methods.
 
-arXiv: https://arxiv.org/abs/2510.08558
-Code: https://github.com/langfengQ/verl-agent
+arXiv: https://arxiv.org/abs/2512.14614
+Code: https://github.com/Tencent-Hunyuan/HY-WorldPlay
 
-https://x.com/langfengq/status/1930848580505620677
+https://x.com/DylanTFWang/status/2001146210779115550
 
 ----
 
@@ -68,17 +68,15 @@ https://x.com/StellaLisy/status/1927392717593526780
 
 ----
 
-WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling
+WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting
 
-Wenqiang Sun et al. — 74 citations · 1530★ GitHub
-@DylanTFWang @TencentHunyuan
+Yifan Liu et al. — 39 citations
 
-This paper presents WorldPlay, a streaming video diffusion model that enables real-time, interactive world modeling with long-term geometric consistency, resolving the trade-off between speed and memory that limits current methods.
+We present WorldMirror, a unified feed-forward model for comprehensive 3D geometric prediction tasks. Unlike existing methods constrained to image-only inputs or customized for a specific task, our framework flexibly integrates diverse geometric priors, including camera poses, intrinsics, and depth maps, while simultaneously generating multiple 3D representations: dense point clouds, multi-view depth maps, camera parameters, surface normals, and 3D Gaussians.
 
-arXiv: https://arxiv.org/abs/2512.14614
-Code: https://github.com/Tencent-Hunyuan/HY-WorldPlay
+arXiv: https://arxiv.org/abs/2510.10726
 
-https://x.com/DylanTFWang/status/2001146210779115550
+[X post link]
 
 ----
 
@@ -599,18 +597,6 @@ Code: https://github.com/safety-research/assistant-axis
 
 ----
 
-WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting
-
-Yifan Liu et al. — 39 citations
-
-We present WorldMirror, a unified feed-forward model for comprehensive 3D geometric prediction tasks. Unlike existing methods constrained to image-only inputs or customized for a specific task, our framework flexibly integrates diverse geometric priors, including camera poses, intrinsics, and depth maps, while simultaneously generating multiple 3D representations: dense point clouds, multi-view depth maps, camera parameters, surface normals, and 3D Gaussians.
-
-arXiv: https://arxiv.org/abs/2510.10726
-
-[X post link]
-
-----
-
 Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers
 
 Wenhan Ma et al. — 38 citations · 0★ GitHub
@@ -644,6 +630,18 @@ Jung Yi et al. — 37 citations
 Recent advances in autoregressive video diffusion have enabled real-time frame streaming, yet existing solutions still suffer from temporal repetition, drift, and motion deceleration. We find that naïvely applying StreamingLLM-style attention sinks to video diffusion leads to fidelity degradation and motion stagnation.
 
 arXiv: https://arxiv.org/abs/2512.05081
+
+[X post link]
+
+----
+
+Entropy-Aware On-Policy Distillation of Language Models
+
+Woogyeol Jin et al. — 37 citations
+
+On-policy distillation is a promising approach for transferring knowledge between language models, where a student learns from dense token-level signals along its own trajectories. This framework typically uses reverse KL divergence, encouraging the student to match the teacher's high-confidence predictions.
+
+arXiv: https://arxiv.org/abs/2603.07079
 
 [X post link]
 

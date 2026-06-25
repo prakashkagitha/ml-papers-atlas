@@ -518,19 +518,14 @@
     "title": "Agent Learning via Early Experience",
     "citation_count": "44",
     "arxiv": "2510.08558",
-    "github_repo": "https://github.com/langfengQ/verl-agent",
+    "github_repo": "",
     "hf_page": "https://huggingface.co/papers/2510.08558",
-    "candidate_post_urls": [
-      "https://x.com/langfengq/status/1930848580505620677"
-    ],
-    "candidate_handles": [
-      "langfengq"
-    ],
-    "author_post_url": "https://x.com/langfengq/status/1930848580505620677",
-    "tag_handles": [
-      "langfengq"
-    ],
-    "github_stars": 2049
+    "candidate_post_urls": [],
+    "candidate_handles": [],
+    "author_post_url": "",
+    "tag_handles": [],
+    "exclude": true,
+    "exclude_reason": "Mis-attributed repo/post: langfengQ/verl-agent (and @langfengq) are Lang Feng's framework that references this paper, not its own code; first author is Kai Zhang."
   },
   "EvmCeoiKYI": {
     "rank": "37",

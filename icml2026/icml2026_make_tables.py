@@ -244,13 +244,14 @@ def main() -> None:
     live = json.loads(Path("outputs/_live_stars.json").read_text())
     posts = json.loads(Path("outputs/icml2026_author_posts.json").read_text())
 
+    excluded = {oid for oid, v in posts.items() if v.get("exclude")}
     oid_repo: Dict[str, str] = {}
     for oid, v in posts.items():
-        if v.get("github_repo"):
+        if v.get("github_repo") and oid not in excluded:
             oid_repo[oid] = v["github_repo"].rsplit("github.com/", 1)[-1].strip("/")
     for r in csv.DictReader(Path("outputs/icml2026_top_papers_by_github_stars.csv").open(encoding="utf-8")):
         oid = oid_of(r)
-        if oid and r.get("github_repo"):
+        if oid and oid not in excluded and r.get("github_repo"):
             oid_repo.setdefault(oid, r["github_repo"].rsplit("github.com/", 1)[-1].strip("/"))
 
     def stars_for(oid: str) -> Optional[int]:
@@ -263,7 +264,7 @@ def main() -> None:
                 "citations": m["citation_count"], "stars": stars, "type": paper_type(m)}
 
     # ----- list A: top 20 by citations -----
-    cited = sorted(master.values(),
+    cited = sorted((m for oid, m in master.items() if oid not in excluded),
                    key=lambda r: int(r["citation_count"]) if r["citation_count"].lstrip("-").isdigit() else -1,
                    reverse=True)[:20]
     rows_cit = [row_of(i, r, stars_for(r["openreview_id"])) for i, r in enumerate(cited, 1)]
