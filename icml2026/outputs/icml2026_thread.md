@@ -5,7 +5,7 @@ Citation counts via Semantic Scholar (snapshot). Top 30 by citations, extended t
 > For each paper: the author/lab X post to **quote/RT** is in `author_post_url` (blank = not yet verified). Tag the listed handles. Avoid RT-ing paper-sharing accounts (@_akhaliq, @HuggingPapers, ...).
 
 ## 1. $\tau^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment
-*Victor Barres et al. — 275 citations · Oral*
+*Victor Barres et al. — 275 citations · 1436★ GitHub · Oral*
 
 Existing benchmarks for conversational AI agents simulate *single-control* environments, where only the AI agent can use tools to interact with the world, while the user remains a passive…
 
@@ -17,7 +17,7 @@ Existing benchmarks for conversational AI agents simulate *single-control* envir
 ---
 
 ## 2. RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation
-*Tianxing Chen et al. — 270 citations*
+*Tianxing Chen et al. — 270 citations · 2489★ GitHub*
 
 Simulation-based data synthesis has emerged as a powerful paradigm for enhancing real-world robotic manipulation.
 
@@ -29,7 +29,7 @@ Simulation-based data synthesis has emerged as a powerful paradigm for enhancing
 ---
 
 ## 3. Spurious Rewards: Rethinking Training Signals in RLVR
-*Rulin Shao et al. — 184 citations*
+*Rulin Shao et al. — 184 citations · 358★ GitHub*
 
 We show that reinforcement learning with verifiable rewards (RLVR) can elicit strong mathematical reasoning in certain language models even with spurious rewards that have little, no, or outright…
 
@@ -41,7 +41,7 @@ We show that reinforcement learning with verifiable rewards (RLVR) can elicit st
 ---
 
 ## 4. WISE: World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation
-*Yuwei Niu et al. — 173 citations*
+*Yuwei Niu et al. — 173 citations · 208★ GitHub*
 
 Text-to-Image (T2I) models are capable of generating high-quality artistic creations and visual content.
 
@@ -76,7 +76,7 @@ Recent studies indicate that when faced with explicit biases in prompts, models 
 ---
 
 ## 7. dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
-*Zhiyuan Liu et al. — 141 citations*
+*Zhiyuan Liu et al. — 141 citations · 207★ GitHub*
 
 Autoregressive Models (ARMs) have long dominated the landscape of Large Language Models.
 
@@ -99,7 +99,7 @@ Large language models are increasingly post-trained with reinforcement learning 
 ---
 
 ## 9. SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?
-*Xiang Deng et al. — 120 citations*
+*Xiang Deng et al. — 120 citations · 453★ GitHub*
 
 We present SWE-Bench Pro, a comprehensive benchmark designed to evaluate software engineering capabilities through complex, realistic programming challenges.
 
@@ -111,7 +111,7 @@ We present SWE-Bench Pro, a comprehensive benchmark designed to evaluate softwar
 ---
 
 ## 10. Self-Distillation Enables Continual Learning
-*Idan Shenfeld et al. — 102 citations · Spotlight*
+*Idan Shenfeld et al. — 102 citations · 632★ GitHub · Spotlight*
 
 Continual learning, enabling models to acquire new skills and knowledge without degrading existing capabilities, remains a fundamental challenge for foundation models.
 
@@ -134,7 +134,7 @@ Group Relative Policy Optimization (GRPO) was introduced recently and used to tr
 ---
 
 ## 12. Does Math Reasoning Improve General LLM Capabilities? Understanding Transferability of LLM Reasoning
-*Maggie Ziyu Huan et al. — 89 citations*
+*Maggie Ziyu Huan et al. — 89 citations · 110★ GitHub*
 
 Math reasoning has become the poster child of progress in large language models (LLMs), with new models rapidly surpassing human-level performance on benchmarks like MATH and AIME.
 
@@ -146,7 +146,7 @@ Math reasoning has become the poster child of progress in large language models 
 ---
 
 ## 13. GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization
-*Shih-Yang Liu et al. — 89 citations*
+*Shih-Yang Liu et al. — 89 citations · 480★ GitHub*
 
 As language models become increasingly capable, users expect them to provide not only accurate responses but also behaviors aligned with diverse human preferences across a variety of scenarios.
 
@@ -158,7 +158,7 @@ As language models become increasingly capable, users expect them to provide not
 ---
 
 ## 14. Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity
-*Jiayi Zhang et al. — 78 citations*
+*Jiayi Zhang et al. — 78 citations · 771★ GitHub*
 
 Post-training alignment often reduces LLM diversity, leading to a phenomenon known as mode collapse.
 
@@ -204,7 +204,7 @@ Existing Vision-Language-Action (VLA) models struggle with complex manipulation 
 ---
 
 ## 18. SimpleMem: Efficient Lifelong Memory for LLM Agents
-*Jiaqi Liu et al. — 74 citations*
+*Jiaqi Liu et al. — 74 citations · 3541★ GitHub*
 
 To support long-term interaction in complex environments, LLM agents require memory systems that manage historical experiences.
 
@@ -216,7 +216,7 @@ To support long-term interaction in complex environments, LLM agents require mem
 ---
 
 ## 19. WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling
-*Wenqiang Sun et al. — 74 citations*
+*Wenqiang Sun et al. — 74 citations · 1530★ GitHub*
 
 This paper presents WorldPlay, a streaming video diffusion model that enables real-time, interactive world modeling with long-term geometric consistency, resolving the trade-off between speed and…
 
@@ -228,7 +228,7 @@ This paper presents WorldPlay, a streaming video diffusion model that enables re
 ---
 
 ## 20. Advancing LLM Reasoning with Natural Language and Numerical Feedback
-*Xiaoying Zhang et al. — 71 citations · Spotlight*
+*Xiaoying Zhang et al. — 71 citations · 69★ GitHub · Spotlight*
 
 Recent advances in reinforcement learning (RL) using numerical rewards have significantly enhanced the complex reasoning capabilities of large language models (LLMs).
 
@@ -239,7 +239,7 @@ Recent advances in reinforcement learning (RL) using numerical rewards have sign
 ---
 
 ## 21. Discrete Diffusion VLA: Bringing Discrete Diffusion to Action Decoding in Vision-Language-Action Policies
-*Zhixuan Liang et al. — 67 citations*
+*Zhixuan Liang et al. — 67 citations · 419★ GitHub*
 
 Vision–Language–Action (VLA) models adapt large vision–language backbones to map images and instructions into robot actions.
 
@@ -273,7 +273,7 @@ To achieve real-time video generation, current approaches distill pretrained bid
 ---
 
 ## 24. Learning to Discover at Test Time
-*Mert Yuksekgonul et al. — 56 citations · Spotlight*
+*Mert Yuksekgonul et al. — 56 citations · 591★ GitHub · Spotlight*
 
 How can we use AI to discover a new state of the art for a scientific problem?
 
@@ -308,7 +308,7 @@ Recently, studies exemplified by Hyper-Connections (HC) have extended the ubiqui
 ---
 
 ## 27. Retaining by Doing: The Role of On-Policy Data in Mitigating Forgetting
-*Howard Chen et al. — 54 citations*
+*Howard Chen et al. — 54 citations · 44★ GitHub*
 
 Adapting language models (LMs) to new tasks via post-training carries the risk of degrading existing capabilities -- a phenomenon classically known as catastrophic forgetting.
 
@@ -320,7 +320,7 @@ Adapting language models (LMs) to new tasks via post-training carries the risk o
 ---
 
 ## 28. MemEvolve: Meta-Evolution of Agent Memory Systems
-*Guibin Zhang et al. — 52 citations*
+*Guibin Zhang et al. — 52 citations · 246★ GitHub*
 
 Self-evolving memory systems are rapidly reshaping the evolutionary paradigm of large language model (LLM)-based agents.
 
@@ -331,7 +331,7 @@ Self-evolving memory systems are rapidly reshaping the evolutionary paradigm of 
 ---
 
 ## 29. ACON: Optimizing Context Compression for Long-horizon LLM Agents
-*Minki Kang et al. — 51 citations*
+*Minki Kang et al. — 51 citations · 89★ GitHub*
 
 Large language models (LLMs) are increasingly deployed as agents in dynamic real-world environments, where success depends on maintaining precise records of actions and observations.
 
@@ -342,7 +342,7 @@ Large language models (LLMs) are increasingly deployed as agents in dynamic real
 ---
 
 ## 30. On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models
-*Charlie Zhang et al. — 50 citations · Spotlight*
+*Charlie Zhang et al. — 50 citations · 157★ GitHub · Spotlight*
 
 Recent reinforcement learning (RL) techniques have yielded impressive reasoning improvements in language models, yet it remains unclear whether post-training truly extends a model’s reasoning…
 
@@ -376,7 +376,7 @@ Chain-of-Thought (CoT) reasoning has become a powerful framework for improving c
 ---
 
 ## 33. ATLAS: Learning to Optimally Memorize the Context at Test Time
-*Ali Behrouz et al. — 48 citations*
+*Ali Behrouz et al. — 48 citations · 2★ GitHub*
 
 Transformers have been established as the most popular backbones in sequence modeling, mainly due to their effectiveness in in-context retrieval tasks and the ability to learn at scale.
 
@@ -398,7 +398,7 @@ Multimodal generative models require a unified approach to handle both discrete 
 ---
 
 ## 35. SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience
-*ZEYI SUN et al. — 45 citations*
+*ZEYI SUN et al. — 45 citations · 250★ GitHub*
 
 Repurposing large vision-language models (LVLMs) as computer use agents (CUAs) has led to substantial breakthroughs, primarily driven by human-labeled data.
 
@@ -409,7 +409,7 @@ Repurposing large vision-language models (LVLMs) as computer use agents (CUAs) h
 ---
 
 ## 36. Agent Learning via Early Experience
-*Kai Zhang et al. — 44 citations*
+*Kai Zhang et al. — 44 citations · 2049★ GitHub*
 
 A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks.
 
@@ -421,7 +421,7 @@ A long-term goal of language agents is to learn and improve through their own ex
 ---
 
 ## 37. ZeroBench: An Impossible Visual Benchmark for Contemporary Large Multimodal Models
-*Jonathan Roberts et al. — 44 citations*
+*Jonathan Roberts et al. — 44 citations · 760★ GitHub*
 
 Large Multimodal Models (LMMs) exhibit shortfalls when interpreting images and, by some measures, have poorer spatial cognition than young children or animals.
 
@@ -432,7 +432,7 @@ Large Multimodal Models (LMMs) exhibit shortfalls when interpreting images and, 
 ---
 
 ## 38. Blending Supervised and Reinforcement Fine-Tuning with Prefix Sampling
-*Zeyu Huang et al. — 41 citations*
+*Zeyu Huang et al. — 41 citations · 6★ GitHub*
 
 Existing LLMs-post-training techniques are broadly categorized into supervised fine-tuning (SFT) and reinforcement fine-tuning (RFT).
 
@@ -443,7 +443,7 @@ Existing LLMs-post-training techniques are broadly categorized into supervised f
 ---
 
 ## 39. Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning
-*Haoran Luo et al. — 41 citations*
+*Haoran Luo et al. — 41 citations · 571★ GitHub*
 
 Retrieval-Augmented Generation (RAG) mitigates hallucination in LLMs by incorporating external knowledge, but relies on chunk-based retrieval that lacks structural semantics.
 
@@ -454,7 +454,7 @@ Retrieval-Augmented Generation (RAG) mitigates hallucination in LLMs by incorpor
 ---
 
 ## 40. NorMuon: Making Muon more efficient and scalable
-*Zichong Li et al. — 41 citations · Spotlight*
+*Zichong Li et al. — 41 citations · 81★ GitHub · Spotlight*
 
 The choice of optimizer significantly impacts the training efficiency and computational costs of large language models (LLMs).
 
@@ -476,7 +476,7 @@ Inspired by the idea of Positive-incentive Noise (*Pi-Noise* or *$\pi$-Noise*) t
 ---
 
 ## 42. DexMachina: Functional Retargeting for Bimanual Dexterous Manipulation
-*Zhao Mandi et al. — 40 citations*
+*Zhao Mandi et al. — 40 citations · 231★ GitHub*
 
 We study the problem of functional retargeting: learning dexterous manipulation policies to track object states from human hand-object demonstrations.
 
@@ -520,7 +520,7 @@ Tabular foundation models, such as TabPFNv2 and TabICL, have recently dethroned 
 ---
 
 ## 46. The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models
-*Christina Lu et al. — 39 citations · Spotlight*
+*Christina Lu et al. — 39 citations · 149★ GitHub · Spotlight*
 
 Large language models can represent a variety of personas but typically default to a helpful Assistant identity cultivated during post-training.
 
@@ -542,7 +542,7 @@ We present WorldMirror, a unified feed-forward model for comprehensive 3D geomet
 ---
 
 ## 48. Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers
-*Wenhan Ma et al. — 38 citations*
+*Wenhan Ma et al. — 38 citations · 0★ GitHub*
 
 Reinforcement learning (RL) has emerged as a crucial approach for enhancing the capabilities of large language models.
 
@@ -553,7 +553,7 @@ Reinforcement learning (RL) has emerged as a crucial approach for enhancing the 
 ---
 
 ## 49. ACTIVE-o3 : Empowering MLLMs with Active Perception via Pure Reinforcement Learning
-*Muzhi Zhu et al. — 37 citations*
+*Muzhi Zhu et al. — 37 citations · 81★ GitHub*
 
 Active vision, also known as active perception, refers to actively selecting where and how to look in order to gather task-relevant information.
 

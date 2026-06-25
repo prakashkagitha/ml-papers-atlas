@@ -99,7 +99,8 @@ def main() -> int:
                 "title": r.get("title", ""),
                 "first_author": r.get("first_author", ""),
                 "citation_count": r.get("citation_count", ""),
-                "github_stars": srow.get("github_stars", ""),
+                "github_stars": (str(prow["github_stars"]) if prow.get("github_stars") is not None
+                                 else srow.get("github_stars", "")),
                 "arxiv_abs_url": r.get("arxiv_abs_url", ""),
                 "arxiv_pdf_url": r.get("arxiv_pdf_url", ""),
                 "github_repo": (prow.get("github_repo") or srow.get("github_repo") or ""),
@@ -128,7 +129,8 @@ def main() -> int:
         srow = stars.get(oid, {})
         prow = posts.get(oid, {})
         cc = r.get("citation_count", "")
-        stars_s = srow.get("github_stars", "")
+        stars_s = (str(prow["github_stars"]) if prow.get("github_stars") is not None
+                   else srow.get("github_stars", ""))
         title = r.get("title", "")
         blurb = one_line_blurb(r.get("abstract", ""))
         meta = f"{cc} citations"
