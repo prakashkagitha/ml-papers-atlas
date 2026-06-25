@@ -273,14 +273,16 @@ def main() -> None:
            "citations", "outputs/icml2026_top20_by_citations.png")
 
     # ----- list B: top 20 by GitHub stars (independent list) -----
+    # Rank over EVERY paper for which we have a repo + live star count — the
+    # union of the "ICML 2026" keyword harvest and the per-paper repos found
+    # during citation/author-post discovery. (The keyword harvest alone misses
+    # repos whose description never mentions "ICML 2026", e.g. tau2-bench,
+    # RoboTwin, SimpleMem.)
     star_rows = []
-    seen = set()
-    for r in csv.DictReader(Path("outputs/icml2026_top_papers_by_github_stars.csv").open(encoding="utf-8")):
-        oid = oid_of(r)
-        s = stars_for(oid)
-        if s is None or oid in seen or oid not in master:
+    for oid, full in oid_repo.items():
+        s = live.get(full)
+        if s is None or oid not in master:
             continue
-        seen.add(oid)
         star_rows.append((s, master[oid]))
     star_rows.sort(key=lambda t: t[0], reverse=True)
     rows_star = [row_of(i, m, s) for i, (s, m) in enumerate(star_rows[:20], 1)]
