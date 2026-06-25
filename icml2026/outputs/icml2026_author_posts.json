@@ -186,7 +186,9 @@
     "github_repo": "https://github.com/NVlabs/GDPO",
     "hf_page": "https://huggingface.co/papers/2601.05242",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "shizhediao"
+    ],
     "author_post_url": "",
     "tag_handles": []
   },
@@ -242,7 +244,9 @@
     "github_repo": "",
     "hf_page": "https://huggingface.co/papers/2507.15597",
     "candidate_post_urls": [],
-    "candidate_handles": [],
+    "candidate_handles": [
+      "beingbeyond_"
+    ],
     "author_post_url": "",
     "tag_handles": []
   },
@@ -340,8 +344,11 @@
     "candidate_handles": [
       "mertyuksekgonul"
     ],
-    "author_post_url": "",
-    "tag_handles": []
+    "author_post_url": "https://x.com/YejinChoinka/status/2015548029424795998",
+    "tag_handles": [
+      "YejinChoinka",
+      "mertyuksekgonul"
+    ]
   },
   "FuvU7PTyED": {
     "rank": "25",
@@ -379,6 +386,7 @@
     "hf_page": "https://huggingface.co/papers/2510.18874",
     "candidate_post_urls": [],
     "candidate_handles": [
+      "noamrazin",
       "HowardChenGMBP"
     ],
     "author_post_url": "",

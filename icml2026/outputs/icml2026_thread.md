@@ -153,6 +153,7 @@ As language models become increasingly capable, users expect them to provide not
 [arXiv](https://arxiv.org/abs/2601.05242) · [code](https://github.com/NVlabs/GDPO) · [ICML](https://icml.cc/virtual/2026/poster/63333) · [OpenReview](https://openreview.net/forum?id=Y1rHxA58If)
 
 **Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @shizhediao
 
 ---
 
@@ -198,6 +199,7 @@ Existing Vision-Language-Action (VLA) models struggle with complex manipulation 
 [arXiv](https://arxiv.org/abs/2507.15597) · [ICML](https://icml.cc/virtual/2026/poster/62813) · [OpenReview](https://openreview.net/forum?id=d2TFven78P)
 
 **Author X post:** _TODO: verify author thread_
+  - candidate handle(s): @beingbeyond_
 
 ---
 
@@ -277,8 +279,8 @@ How can we use AI to discover a new state of the art for a scientific problem?
 
 [arXiv](https://arxiv.org/abs/2601.16175) · [code](https://github.com/test-time-training/discover) · [ICML](https://icml.cc/virtual/2026/poster/65888) · [OpenReview](https://openreview.net/forum?id=96zNuQrH9Y)
 
-**Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @mertyuksekgonul
+**Author X post:** https://x.com/YejinChoinka/status/2015548029424795998
+**Tag:** YejinChoinka mertyuksekgonul
 
 ---
 
@@ -313,7 +315,7 @@ Adapting language models (LMs) to new tasks via post-training carries the risk o
 [arXiv](https://arxiv.org/abs/2510.18874) · [code](https://github.com/princeton-pli/retaining-by-doing) · [ICML](https://icml.cc/virtual/2026/poster/64375) · [OpenReview](https://openreview.net/forum?id=ODTM64azGa)
 
 **Author X post:** _TODO: verify author thread_
-  - candidate handle(s): @HowardChenGMBP
+  - candidate handle(s): @noamrazin, @HowardChenGMBP
 
 ---
 
