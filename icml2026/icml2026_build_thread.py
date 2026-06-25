@@ -32,16 +32,29 @@ def to_int(s: Any) -> int:
         return -1
 
 
-def one_line_blurb(abstract: str, limit: int = 200) -> str:
-    abstract = re.sub(r"\s+", " ", abstract or "").strip()
-    if not abstract:
+def one_line_blurb(abstract: str, min_sentences: int = 2, max_sentences: int = 3,
+                   soft_limit: int = 340, hard_limit: int = 520) -> str:
+    """A clean 2-3 sentence TL;DR — always ends on a full sentence, never '…'."""
+    text = re.sub(r"\s+", " ", abstract or "").strip()
+    text = text.replace("$", "")  # drop stray inline-math markers
+    if not text:
         return ""
-    # first sentence, else hard truncate
-    m = re.search(r"(.+?[.!?])\s", abstract)
-    s = m.group(1) if m and len(m.group(1)) >= 40 else abstract
-    if len(s) > limit:
-        s = s[: limit - 1].rsplit(" ", 1)[0] + "…"
-    return s
+    # split on sentence boundaries, but not on decimals / abbreviations
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+(?=[A-Z(\"“])", text) if s.strip()]
+    out: List[str] = []
+    total = 0
+    for s in sentences:
+        if out:
+            projected = total + len(s)
+            if len(out) >= max_sentences:
+                break
+            if projected > hard_limit:
+                break
+            if len(out) >= min_sentences and projected > soft_limit:
+                break
+        out.append(s)
+        total += len(s) + 1
+    return " ".join(out).strip()
 
 
 def select_papers(rows: List[Dict[str, str]], base: int, extend_to: int, threshold: int) -> List[Dict[str, str]]:
@@ -231,18 +244,23 @@ def main() -> int:
         if links:
             lines.append(" · ".join(links))
             lines.append("")
+        def handle_links(hs):
+            return " ".join(f"[@{h}](https://x.com/{h})" for h in hs)
+
         post = prow.get("author_post_url", "")
-        tag = " ".join(prow.get("tag_handles", []) or [])
+        tag = prow.get("tag_handles", []) or []
         cand_urls = prow.get("candidate_post_urls", []) or []
-        cand_handles = prow.get("candidate_handles", []) or []
-        lines.append(f"**Author X post:** {post or '_TODO: verify author thread_'}")
-        if tag:
-            lines.append(f"**Tag:** {tag}")
-        if not post and (cand_urls or cand_handles):
+        cand_handles = [h for h in (prow.get("candidate_handles", []) or []) if h not in tag]
+        if post:
+            lines.append(f"**Author X post:** {post}")
+            if tag:
+                lines.append(f"**Tag:** {handle_links(tag)}")
+        else:
+            lines.append("**Author X post:** _TODO: verify author thread_")
+            if cand_handles:
+                lines.append(f"**Author handle(s):** {handle_links(cand_handles[:5])}")
             if cand_urls:
                 lines.append(f"  - candidate post(s): {', '.join(cand_urls[:3])}")
-            if cand_handles:
-                lines.append(f"  - candidate handle(s): {', '.join('@'+h for h in cand_handles[:5])}")
         lines.append("")
         lines.append("---")
         lines.append("")
