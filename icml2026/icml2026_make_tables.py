@@ -1,45 +1,68 @@
 #!/usr/bin/env python3
-"""Render ICML 2026 ranking tables as PNG images (no matplotlib; PIL only).
+"""Render ICML 2026 ranking tables as high-resolution PNG images (PIL only).
 
-Produces:
-  outputs/icml2026_top20_by_citations.png  -- top 20 papers by Semantic Scholar
-      citations, with GitHub stars alongside.
-  outputs/icml2026_top20_by_stars.png      -- top 20 papers by GitHub stars,
-      with citation counts alongside.
+Two independent lists with identical columns (# · Paper · First author ·
+Citations · GitHub ★ · Type); one sorted by citations, one by GitHub stars:
 
-Star counts come from outputs/_live_stars.json (live GitHub API snapshot);
-citations from outputs/icml2026_citations.csv; repo links from the stars
-cross-check and the author-posts JSON.
+  outputs/icml2026_top20_by_citations.png
+  outputs/icml2026_top20_by_stars.png
+
+Star counts come from outputs/_live_stars.json (live GitHub snapshot);
+citations from outputs/icml2026_citations.csv.
 """
 from __future__ import annotations
 
 import csv
 import json
+import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from PIL import Image, ImageDraw, ImageFont
 
-FONT_DIR = "/usr/share/fonts/truetype/dejavu"
-F_REG = f"{FONT_DIR}/DejaVuSans.ttf"
-F_BOLD = f"{FONT_DIR}/DejaVuSans-Bold.ttf"
+# ----- fonts (Inter: modern, screen-optimized) -----
+_INT = "/usr/share/fonts/opentype/inter"
+F_REGULAR = f"{_INT}/Inter-Regular.otf"
+F_MEDIUM = f"{_INT}/Inter-Medium.otf"
+F_SEMIBOLD = f"{_INT}/Inter-SemiBold.otf"
+F_BOLD = f"{_INT}/Inter-Bold.otf"
+F_XBOLD = f"{_INT}/Inter-ExtraBold.otf"
 
-# palette
-C_BG = (255, 255, 255)
-C_HEADER = (31, 59, 97)        # dark navy
-C_HEADER_TXT = (255, 255, 255)
+# ----- supersample for crisp, high-resolution output -----
+SCALE = 3
+
+# ----- palette -----
+C_PAGE = (248, 250, 252)
+C_TITLEBAR = (17, 28, 46)
+C_TITLE = (255, 255, 255)
+C_SUBTITLE = (151, 178, 214)
+C_HEADER = (37, 55, 86)
+C_HEADER_TXT = (226, 234, 245)
 C_ROW_A = (255, 255, 255)
-C_ROW_B = (241, 245, 250)
-C_TEXT = (24, 28, 34)
-C_MUTED = (110, 120, 132)
-C_CITE = (176, 48, 48)         # citations accent
-C_STAR = (193, 138, 17)        # github stars accent
-C_LINE = (214, 221, 230)
-C_TITLEBAR = (15, 30, 52)
+C_ROW_B = (243, 246, 250)
+C_TEXT = (23, 30, 41)
+C_MUTED = (118, 128, 142)
+C_RANK = (158, 167, 180)
+C_CITE = (197, 51, 51)
+C_STAR = (191, 132, 17)
+C_LINE = (224, 230, 238)
+BADGE = {  # (bg, text)
+    "Oral": ((253, 232, 232), (181, 45, 45)),
+    "Spotlight": ((228, 244, 234), (28, 112, 70)),
+    "Poster": ((236, 240, 245), (112, 122, 136)),
+}
 
 
+def S(x: float) -> int:
+    return int(round(x * SCALE))
+
+
+def font(path: str, size: float) -> ImageFont.FreeTypeFont:
+    return ImageFont.truetype(path, S(size))
+
+
+# ----- data helpers -----
 def load_master() -> Dict[str, Dict[str, str]]:
-    """openreview_id -> citation row (rank/title/author/citations/type)."""
     out = {}
     for r in csv.DictReader(Path("outputs/icml2026_citations.csv").open(encoding="utf-8")):
         out[r["openreview_id"]] = r
@@ -54,7 +77,6 @@ _SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
 
 
 def clean_title(t: str) -> str:
-    import re
     t = t or ""
     for name, ch in _GREEK.items():
         t = re.sub(rf"\\{name}\b", ch, t)
@@ -65,9 +87,10 @@ def clean_title(t: str) -> str:
 
 
 def short_authors(authors: str) -> str:
-    first = (authors or "").split(",")[0].strip()
-    rest = [a for a in (authors or "").split(",") if a.strip()]
-    return f"{first} et al." if len(rest) > 1 else first
+    parts = [a.strip() for a in (authors or "").split(",") if a.strip()]
+    if not parts:
+        return ""
+    return f"{parts[0]} et al." if len(parts) > 1 else parts[0]
 
 
 def paper_type(r: Dict[str, str]) -> str:
@@ -78,32 +101,6 @@ def paper_type(r: Dict[str, str]) -> str:
     return "Poster"
 
 
-def wrap(draw, text, font, max_w, max_lines=2) -> List[str]:
-    words = text.split()
-    lines: List[str] = []
-    cur = ""
-    for w in words:
-        t = (cur + " " + w).strip()
-        if draw.textlength(t, font=font) <= max_w:
-            cur = t
-        else:
-            if cur:
-                lines.append(cur)
-            cur = w
-            if len(lines) == max_lines - 1:
-                break
-    if cur:
-        lines.append(cur)
-    # ellipsize last line if leftover words remain
-    used = sum(len(l.split()) for l in lines)
-    if used < len(words) and lines:
-        last = lines[-1]
-        while draw.textlength(last + " …", font=font) > max_w and last:
-            last = last.rsplit(" ", 1)[0] if " " in last else last[:-1]
-        lines[-1] = last + " …"
-    return lines[:max_lines]
-
-
 def fmt_int(v) -> str:
     try:
         return f"{int(v):,}"
@@ -111,75 +108,135 @@ def fmt_int(v) -> str:
         return "—"
 
 
-def render(rows: List[Dict[str, Any]], columns: List[Dict[str, Any]],
-           title: str, subtitle: str, out_path: str) -> None:
-    f_title = ImageFont.truetype(F_BOLD, 30)
-    f_sub = ImageFont.truetype(F_REG, 17)
-    f_head = ImageFont.truetype(F_BOLD, 18)
-    f_cell = ImageFont.truetype(F_REG, 18)
-    f_cell_b = ImageFont.truetype(F_BOLD, 19)
-    f_small = ImageFont.truetype(F_REG, 15)
+def wrap_lines(draw, text, fnt, max_w, max_lines) -> List[str]:
+    """Greedily fill each line; only ellipsize if it truly overflows max_lines."""
+    words = text.split()
+    lines: List[str] = []
+    cur = ""
+    for w in words:
+        trial = (cur + " " + w).strip()
+        if cur and draw.textlength(trial, font=fnt) > max_w:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = trial
+    if cur:
+        lines.append(cur)
+    if len(lines) <= max_lines:
+        return lines
+    kept = lines[:max_lines]
+    last = kept[-1]
+    while draw.textlength(last + "…", font=fnt) > max_w and " " in last:
+        last = last.rsplit(" ", 1)[0]
+    kept[-1] = last + "…"
+    return kept
 
-    pad = 22
-    width = sum(c["w"] for c in columns) + pad * 2
-    title_h = 92
-    head_h = 46
-    row_h = 60
-    height = title_h + head_h + row_h * len(rows) + pad
 
-    img = Image.new("RGB", (width, height), C_BG)
+# ----- rendering -----
+def render(rows, columns, title, subtitle, sort_key, out_path) -> None:
+    f_title = font(F_XBOLD, 26)
+    f_sub = font(F_REGULAR, 13.5)
+    f_head = font(F_SEMIBOLD, 13.5)
+    f_rank = font(F_BOLD, 15)
+    f_paper = font(F_SEMIBOLD, 14.5)
+    f_auth = font(F_REGULAR, 13.5)
+    f_num = font(F_BOLD, 15.5)
+    f_badge = font(F_MEDIUM, 11.5)
+
+    margin = 26
+    width = S(margin) * 2 + sum(S(c["w"]) for c in columns)
+    title_h = S(78)
+    head_h = S(40)
+    row_h = S(62)
+    height = title_h + head_h + row_h * len(rows) + S(margin)
+
+    img = Image.new("RGB", (width, height), C_PAGE)
     d = ImageDraw.Draw(img)
 
     # title bar
     d.rectangle([0, 0, width, title_h], fill=C_TITLEBAR)
-    d.text((pad, 20), title, font=f_title, fill=(255, 255, 255))
-    d.text((pad, 60), subtitle, font=f_sub, fill=(173, 196, 224))
+    d.text((S(margin), S(18)), title, font=f_title, fill=C_TITLE)
+    d.text((S(margin), S(52)), subtitle, font=f_sub, fill=C_SUBTITLE)
 
+    # header
+    x0 = S(margin)
     y = title_h
-    # header row
-    x = pad
     d.rectangle([0, y, width, y + head_h], fill=C_HEADER)
+    x = x0
     for c in columns:
-        tx = x + 12 if c["align"] == "l" else x + c["w"] - 12
-        anchor = "lm" if c["align"] == "l" else "rm"
-        d.text((tx, y + head_h // 2), c["head"], font=f_head, fill=C_HEADER_TXT, anchor=anchor)
-        x += c["w"]
+        cw = S(c["w"])
+        if c["align"] == "l":
+            d.text((x + S(14), y + head_h / 2), c["head"], font=f_head,
+                   fill=C_HEADER_TXT, anchor="lm")
+        elif c["align"] == "r":
+            d.text((x + cw - S(14), y + head_h / 2), c["head"], font=f_head,
+                   fill=C_HEADER_TXT, anchor="rm")
+        else:
+            d.text((x + cw / 2, y + head_h / 2), c["head"], font=f_head,
+                   fill=C_HEADER_TXT, anchor="mm")
+        x += cw
     y += head_h
 
     for i, row in enumerate(rows):
-        rc = C_ROW_A if i % 2 == 0 else C_ROW_B
-        d.rectangle([0, y, width, y + row_h], fill=rc)
-        d.line([0, y + row_h, width, y + row_h], fill=C_LINE, width=1)
-        x = pad
+        d.rectangle([0, y, width, y + row_h], fill=C_ROW_A if i % 2 == 0 else C_ROW_B)
+        d.line([0, y + row_h, width, y + row_h], fill=C_LINE, width=max(1, S(0.4)))
+        x = x0
+        cy = y + row_h / 2
         for c in columns:
+            cw = S(c["w"])
             key = c["key"]
             val = row.get(key, "")
-            cx_l = x + 12
-            cx_r = x + c["w"] - 12
-            cy = y + row_h // 2
-            if key == "title":
-                lines = wrap(d, val, f_cell, c["w"] - 24, max_lines=2)
-                total = len(lines) * 21
-                ty = y + (row_h - total) // 2 + 10
+            if key == "rank":
+                d.text((x + cw / 2, cy), str(val), font=f_rank, fill=C_RANK, anchor="mm")
+            elif key == "title":
+                lines = wrap_lines(d, val, f_paper, cw - S(28), max_lines=2)
+                lh = S(19)
+                ty = cy - (len(lines) - 1) * lh / 2
                 for ln in lines:
-                    d.text((cx_l, ty), ln, font=f_cell, fill=C_TEXT, anchor="lm")
-                    ty += 21
-            elif key == "rank":
-                d.text(((x + c["w"] / 2), cy), str(val), font=f_cell_b, fill=C_MUTED, anchor="mm")
-            elif key in ("citations", "stars"):
-                color = C_CITE if key == "citations" else C_STAR
-                d.text((cx_r, cy), fmt_int(val), font=f_cell_b, fill=color, anchor="rm")
+                    d.text((x + S(14), ty), ln, font=f_paper, fill=C_TEXT, anchor="lm")
+                    ty += lh
             elif key == "author":
-                d.text((cx_l, cy), val, font=f_cell, fill=C_TEXT, anchor="lm")
+                a = wrap_lines(d, val, f_auth, cw - S(20), max_lines=2)
+                lh = S(18)
+                ty = cy - (len(a) - 1) * lh / 2
+                for ln in a:
+                    d.text((x + S(8), ty), ln, font=f_auth, fill=C_MUTED, anchor="lm")
+                    ty += lh
+            elif key in ("citations", "stars"):
+                col = C_CITE if key == "citations" else C_STAR
+                bold = f_num
+                d.text((x + cw - S(16), cy), fmt_int(val), font=bold, fill=col, anchor="rm")
             elif key == "type":
-                t = val
-                tc = (176, 48, 48) if t == "Oral" else (30, 110, 70) if t == "Spotlight" else C_MUTED
-                d.text(((x + c["w"] / 2), cy), t, font=f_small, fill=tc, anchor="mm")
-            x += c["w"]
+                bg, fg = BADGE.get(val, BADGE["Poster"])
+                tw = d.textlength(val, font=f_badge)
+                bw, bh = tw + S(18), S(22)
+                bx0 = x + cw / 2 - bw / 2
+                by0 = cy - bh / 2
+                d.rounded_rectangle([bx0, by0, bx0 + bw, by0 + bh], radius=S(11), fill=bg)
+                d.text((x + cw / 2, cy), val, font=f_badge, fill=fg, anchor="mm")
+            x += cw
         y += row_h
 
     img.save(out_path)
     print(f"wrote {out_path}  ({width}x{height})")
+
+
+# identical columns for both tables
+COLUMNS = [
+    {"head": "#", "key": "rank", "w": 46, "align": "c"},
+    {"head": "Paper", "key": "title", "w": 560, "align": "l"},
+    {"head": "First author", "key": "author", "w": 196, "align": "l"},
+    {"head": "Citations", "key": "citations", "w": 110, "align": "r"},
+    {"head": "GitHub ★", "key": "stars", "w": 110, "align": "r"},
+    {"head": "Type", "key": "type", "w": 104, "align": "c"},
+]
+
+
+def oid_of(row: Dict[str, str]) -> str:
+    if row.get("openreview_id"):
+        return row["openreview_id"]
+    m = re.search(r"id=([^&\s]+)", row.get("openreview_url", "") or "")
+    return m.group(1) if m else ""
 
 
 def main() -> None:
@@ -187,20 +244,10 @@ def main() -> None:
     live = json.loads(Path("outputs/_live_stars.json").read_text())
     posts = json.loads(Path("outputs/icml2026_author_posts.json").read_text())
 
-    # rank -> repo full_name (from posts json) for the cited papers
     oid_repo: Dict[str, str] = {}
     for oid, v in posts.items():
         if v.get("github_repo"):
             oid_repo[oid] = v["github_repo"].rsplit("github.com/", 1)[-1].strip("/")
-    import re
-
-    def oid_of(row: Dict[str, str]) -> str:
-        if row.get("openreview_id"):
-            return row["openreview_id"]
-        m = re.search(r"id=([^&\s]+)", row.get("openreview_url", "") or "")
-        return m.group(1) if m else ""
-
-    # stars cross-check repos too
     for r in csv.DictReader(Path("outputs/icml2026_top_papers_by_github_stars.csv").open(encoding="utf-8")):
         oid = oid_of(r)
         if oid and r.get("github_repo"):
@@ -210,60 +257,37 @@ def main() -> None:
         full = oid_repo.get(oid)
         return live.get(full) if full else None
 
-    # ---- Top 20 by citations ----
-    cited = sorted(master.values(), key=lambda r: int(r["citation_count"]) if r["citation_count"].lstrip("-").isdigit() else -1, reverse=True)[:20]
-    rows_cit = []
-    for i, r in enumerate(cited, 1):
-        rows_cit.append({
-            "rank": i, "title": clean_title(r["title"]), "author": short_authors(r["authors"]),
-            "citations": r["citation_count"], "stars": stars_for(r["openreview_id"]),
-            "type": paper_type(r),
-        })
-    cols_cit = [
-        {"head": "#", "key": "rank", "w": 48, "align": "c"},
-        {"head": "Paper", "key": "title", "w": 600, "align": "l"},
-        {"head": "First author", "key": "author", "w": 215, "align": "l"},
-        {"head": "Citations", "key": "citations", "w": 120, "align": "r"},
-        {"head": "GitHub ★", "key": "stars", "w": 120, "align": "r"},
-        {"head": "Type", "key": "type", "w": 110, "align": "c"},
-    ]
-    render(rows_cit, cols_cit,
-           "ICML 2026 — Top 20 papers by citations",
-           "Citation counts: Semantic Scholar snapshot · GitHub ★: live · ml-papers-atlas",
-           "outputs/icml2026_top20_by_citations.png")
+    def row_of(rank, m, stars):
+        return {"rank": rank, "title": clean_title(m["title"]),
+                "author": short_authors(m["authors"]),
+                "citations": m["citation_count"], "stars": stars, "type": paper_type(m)}
 
-    # ---- Top 20 by GitHub stars ----
-    star_papers = []
+    # ----- list A: top 20 by citations -----
+    cited = sorted(master.values(),
+                   key=lambda r: int(r["citation_count"]) if r["citation_count"].lstrip("-").isdigit() else -1,
+                   reverse=True)[:20]
+    rows_cit = [row_of(i, r, stars_for(r["openreview_id"])) for i, r in enumerate(cited, 1)]
+    render(rows_cit, COLUMNS,
+           "ICML 2026  ·  Top 20 papers by citations",
+           "Citations: Semantic Scholar snapshot   ·   GitHub ★: live   ·   github.com/prakashkagitha/ml-papers-atlas",
+           "citations", "outputs/icml2026_top20_by_citations.png")
+
+    # ----- list B: top 20 by GitHub stars (independent list) -----
+    star_rows = []
     seen = set()
     for r in csv.DictReader(Path("outputs/icml2026_top_papers_by_github_stars.csv").open(encoding="utf-8")):
         oid = oid_of(r)
-        full = oid_repo.get(oid)
-        s = live.get(full) if full else None
-        if s is None or oid in seen:
+        s = stars_for(oid)
+        if s is None or oid in seen or oid not in master:
             continue
         seen.add(oid)
-        m = master.get(oid, {})
-        star_papers.append({
-            "title": clean_title(r["title"]), "author": short_authors(r.get("authors") or m.get("authors", "")),
-            "stars": s, "citations": m.get("citation_count", ""),
-            "type": paper_type(m) if m else "Poster", "repo": full,
-        })
-    star_papers.sort(key=lambda x: x["stars"], reverse=True)
-    rows_star = []
-    for i, r in enumerate(star_papers[:20], 1):
-        rows_star.append({"rank": i, **r})
-    cols_star = [
-        {"head": "#", "key": "rank", "w": 48, "align": "c"},
-        {"head": "Paper", "key": "title", "w": 600, "align": "l"},
-        {"head": "First author", "key": "author", "w": 215, "align": "l"},
-        {"head": "GitHub ★", "key": "stars", "w": 120, "align": "r"},
-        {"head": "Citations", "key": "citations", "w": 120, "align": "r"},
-        {"head": "Type", "key": "type", "w": 110, "align": "c"},
-    ]
-    render(rows_star, cols_star,
-           "ICML 2026 — Top 20 papers by GitHub stars",
-           "GitHub ★: live snapshot · Citations: Semantic Scholar · ml-papers-atlas",
-           "outputs/icml2026_top20_by_stars.png")
+        star_rows.append((s, master[oid]))
+    star_rows.sort(key=lambda t: t[0], reverse=True)
+    rows_star = [row_of(i, m, s) for i, (s, m) in enumerate(star_rows[:20], 1)]
+    render(rows_star, COLUMNS,
+           "ICML 2026  ·  Top 20 papers by GitHub stars",
+           "GitHub ★: live snapshot   ·   Citations: Semantic Scholar   ·   github.com/prakashkagitha/ml-papers-atlas",
+           "stars", "outputs/icml2026_top20_by_stars.png")
 
 
 if __name__ == "__main__":
